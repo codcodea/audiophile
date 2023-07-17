@@ -1,0 +1,38 @@
+
+.white {
+    color: white
+}
+
+.black {
+    color: var(--color-black-1);
+}
+
+.gray {
+    color: var(--hero-gray);
+}
+
+.textBody{
+    container-type: inline-size;
+    container-name: body;
+    display: inline-block;
+    width: 100%;
+    /* border: 1px solid red; */
+}
+
+@container body (min-width: 0px) {
+
+    .lg {
+        font-size: 6cqw;
+        line-height: 7cqi;
+    }
+
+    .md {
+        font-size: 5cqw;
+        line-height: 7cqi;
+    }
+
+    .sm {
+        font-size: 3cqw;
+        line-height: 5cqi;
+    }
+}

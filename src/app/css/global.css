@@ -1,0 +1,43 @@
+
+@import url("./typography.css");
+@import url("./mediaquery.css");
+@import url("./normalize.css");
+@import url("./lists.css");
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --max-width: 1100px;
+    --border-radius: 12px;
+    --color-black-0: #000000;
+    --color-black-1: #101010;
+    --color-white-0: #FFFFFF;
+    --color-white-1: #fafafa;
+    --color-white-2: #f1f1f1;
+    --color-orange-0: #FBAF85;
+    --color-orange-1: #D87D4A;
+    --color-button-gray: #6e6e6e;
+    /* --color-site-background: rgb(253, 253, 253); */
+    --color-site-background: white;
+    --hero-gray: #4e4e4e;
+    --paragraph-gray: #393939;
+}
+
+body {
+    background-color: #d1d1d1;
+}
+
+/* div, section, nav {
+    border: 1px solid salmon;
+} */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+

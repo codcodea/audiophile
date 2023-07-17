@@ -1,0 +1,99 @@
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+.headWrapper {
+    width: 50%;
+    margin-bottom: 3vh;
+
+}
+
+.otherWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.cardWrapper {
+    width: 30%;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 0;
+}
+
+.imageWrapper {
+    grid-row: 1;
+    grid-column: 1;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+}    
+
+
+.image {
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.header {
+    grid-row: 2;
+    grid-column: 1;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 2vh 0;
+  
+}
+
+.buttonWrapper {
+    composes: flex;
+    grid-row: 3;
+    grid-column: 1;
+}
+
+.button {
+    width: inherit;
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    .otherWrapper {
+        position: relative;
+        width: 100%;
+        margin-bottom: 30%;
+    }
+
+    .otherBannerWrapper {
+        display: flex;
+        flex-direction: column;
+        margin-top: 200px;
+    }
+
+    .otherBackground {
+        border-radius: 5%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+
+@media only screen and (min-width: 1024px) {
+   /* default css */
+}

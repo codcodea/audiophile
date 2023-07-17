@@ -1,0 +1,157 @@
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    display: inline;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 1em;
+    min-width: 120px;
+    min-height: 40px;
+    font-size: 0.7em;
+    user-select: none;
+    text-transform: uppercase;
+}
+
+
+.counter {
+    composes: button flex;
+    min-width: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0;
+}
+
+.gray {
+    background-color: #fafafa;
+    color: var(--color-black-1);
+    transition: all 0.3s ease-in-out;
+   
+}
+
+.gray:hover {
+    background-color: #f3f3f3;
+}
+
+.minus {
+    composes: flex;
+    width: auto;
+    font-size: 1.3em;
+}
+
+.number {
+    composes: flex;
+    width: 100%;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.plus {
+    composes: flex;
+    font-size: 1.3em;
+   
+}
+
+
+.transparent {
+    background-color: none;
+    color: var(--color-black-1);
+}
+
+.transparent:hover {
+    color: #252525;
+    background-color: #a2a2a2a3;
+}
+
+.orange {
+    background-color: var(--color-orange-1);
+    color: var(--color-white-1);
+}
+
+.orange:hover {
+    background-color: var(--color-orange-0);
+}
+
+.black {
+    background-color: var(--color-black-1);
+    color: var(--color-white-1);
+}
+
+.black:hover {
+    background-color: #1f1f1fc7;
+}
+
+.white {
+    background-color: var(--color-white-0);
+    border: 1px solid var(--color-black-1);
+    color: var(--color-black-1);
+}
+
+.white:hover {
+    color: var(--color-white-0);
+    background-color: var(--color-black-1);
+}
+
+.filled {
+    composes: button;
+    transition: all 0.3s ease-in-out;
+}
+
+.outline {
+    composes: button;
+    border: 1px solid var(--color-black-1);
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+}
+
+.outline:hover {
+    scale: 1.03;
+    border: 2px solid var(--color-black-1);
+}
+
+
+
+.text {
+    composes: button;
+    border: 0;
+    background-color: transparent;
+    font-weight: 700;
+    color: var(--color-button-gray);
+    transition: all 0.3s ease-in-out;
+}
+
+.text:hover {
+    color: var(--color-orange-1);
+}
+
+@media only screen and (max-width: 1023px) {
+    .filledDynamic {
+        composes: outline button;
+        background-color: transparent;
+        color: var(--color-black-1);
+        font-weight: 600;
+    }
+
+    .filledDynamic:hover {
+        background-color: transparent;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .filledDynamic {
+        composes: button filled black;
+        border-radius: 0;
+    }
+
+    .filledDynamic:hover {
+        background-color: #1f1f1fc7;
+        scale: 1;
+    }
+}

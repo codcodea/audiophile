@@ -1,0 +1,20 @@
+.white {
+    color: white
+}
+
+.black {
+    color: var(--color-black-1);
+}
+
+.textHeadline {
+    container-type: inline-size;
+    container-name: headline;
+    width: 100%;
+    /* border: 1px solid red; */
+}
+
+@container headline (min-width: 0px) {
+    .font {
+        font-size: 11cqw;
+    }
+}

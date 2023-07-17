@@ -1,0 +1,69 @@
+
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.text {
+    composes: flex;
+    width: 50%;
+    height: 100%;
+    padding-left: 3em;
+}
+
+@media only screen and (max-width: 767px) {
+
+    .text {
+        width: 100%;
+        height: 100%;
+        padding-left: 2em;
+    }
+
+    .wrapper {
+        width: 100%;
+        aspect-ratio: 1/1;
+        background-image: url("~/public/assets/home/mobile/image-speaker-zx7.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: antiquewhite;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .text {
+        width: 60%;
+    }
+
+    .wrapper {
+        width: 100%;
+        height: 30vh;
+        background-image: url("~/public/assets/home/tablet/image-speaker-zx7.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: antiquewhite;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .wrapper :global {
+        width: 100%;
+        height: 20vh;
+        background-image: url("~/public/assets/home/desktop/image-speaker-zx7.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: antiquewhite;
+    }
+}

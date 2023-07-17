@@ -1,0 +1,42 @@
+main {
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: var(--color-site-background);
+}
+
+section {
+    margin: 15vh auto;
+}
+
+@media only screen and (max-width: 767px) {
+
+    main {
+        width: 100vw;
+    }
+
+    section {
+        max-width: 90%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    main  {
+        width: 100vw;
+    }
+
+    section {
+        width: 90%;
+    }
+}
+
+
+@media only screen and (min-width: 1024px) {
+    main  {
+        max-width: 80vw;
+    }
+
+    section {
+        width: 80%;
+    }
+}

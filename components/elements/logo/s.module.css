@@ -1,0 +1,13 @@
+
+
+.logoWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75px;
+    cursor: default;
+}
+
+.logo {
+    user-select: none;
+}
