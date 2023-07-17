@@ -1,5 +1,5 @@
 
-import s from './orange.module.css';
+import s from './s.module.css';
 import speaker from 'public/assets/home/desktop/image-speaker-zx9.png';
 import Image from 'next/image';
 

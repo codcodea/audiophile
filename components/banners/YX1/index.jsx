@@ -2,7 +2,7 @@
 
 
 import s from './s.module.css'
-import { Headline, Button, Subhead } from 'components';
+import { Button, Subhead } from 'components';
 
 const Banner_YX1 = () => {
 

@@ -41,10 +41,10 @@ export {
     Headline,
     Subhead,
     Body,
-    Banner_ZX9 as Product_ZX9,
-    Banner_ZX7 as Product_ZX7,
-    Banner_YX1 as Product_YX1,
+    Banner_ZX9,
+    Banner_ZX7,
+    Banner_YX1,
     Prefooter,
-    ProductCard as TwoGrid,
+    ProductCard,
     Category
 };

@@ -1,14 +1,14 @@
 
-import { Hero, CategoryBanner, Product_ZX9, Button, Product_ZX7, Product_YX1, Prefooter } from 'components'
+import { Hero, CategoryBanner, Banner_ZX9, Banner_ZX7, Banner_YX1, Prefooter } from 'components'
 
 export default function Home() {
     return (
         <main>
             <Hero />
             <CategoryBanner />
-            <Product_ZX9 />
-            <Product_ZX7 />
-            <Product_YX1 />
+            <Banner_ZX9 />
+            <Banner_ZX7 />
+            <Banner_YX1 />
             <Prefooter />
             {/* <section className={styles.section}>
                 <h1>Morbi interdum mollis sapien</h1>

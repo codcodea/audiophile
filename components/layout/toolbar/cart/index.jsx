@@ -96,7 +96,7 @@ const Cart = () => {
 
         <aside onClick={handleClick} className={s.cartIcon} >
             <div id="modal"></div>
-            {isOpen && <CartItems />}
+            {/* {isOpen && <CartItems />} */}
         </aside>
 
     )

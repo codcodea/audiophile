@@ -1,6 +1,6 @@
 
 import s from './s.module.css';
-import { TwoGrid, Ingress, Headline, Body, Button, ButtonCounter } from 'components'
+import { ProductCard, Ingress, Headline, Body, Button, ButtonCounter } from 'components'
 
 
 const ProductItem = ({ config }) => {
@@ -20,7 +20,7 @@ const ProductItem = ({ config }) => {
     const absSlug = "/" + category + "/" + slug;
 
     return (
-        <TwoGrid isLeft={isLeft} src={src}>
+        <ProductCard isLeft={isLeft} src={src}>
             {isNew && <Ingress color="orange"> New Product </Ingress>}
             <Headline>{name}</Headline>
             <Body> {description} </Body>
@@ -29,7 +29,7 @@ const ProductItem = ({ config }) => {
                 {hasCounter && <ButtonCounter />}
                 <Button type="filled" color="orange" slug={absSlug}> {label} </Button>
             </div>
-        </TwoGrid>
+        </ProductCard>
     )
 }
 

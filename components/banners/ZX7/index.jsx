@@ -1,7 +1,7 @@
 
 
-import s from './zx7.module.css'
-import { Headline, Button, Subhead } from 'components';
+import s from './s.module.css'
+import { Button, Subhead } from 'components';
 
 const Banner_ZX7 = () => {
 
