@@ -19,7 +19,7 @@ import ButtonCounter from "./elements/button/counter";
 import StatefulButtons from "./elements/button/stateful";
 import ProductCard from "./elements/card";
 
-import Hero from "./banners/hero";
+import HeroBanner from "./banners/hero";
 import Banner_ZX9 from "./banners/ZX9";
 import Banner_ZX7 from "./banners/ZX7";
 import Banner_YX1 from "./banners/YX1";
@@ -43,7 +43,7 @@ export {
     Logo, 
     Social, 
     Navigation, 
-    Hero, 
+    HeroBanner as Hero, 
     Separator, 
     CategoryBanner, 
     Ingress,

@@ -1,7 +1,6 @@
 
-import s from "./s.module.css";
 import Image from "next/image";
-
+import s from "./s.module.css";
 
 const Gallery = ({ images }) => {
 
@@ -18,7 +17,6 @@ const Gallery = ({ images }) => {
             <div className={s.img3}>
                 <Image fill sizes="50%" src={"/" + third.tablet} alt="headphones" />
             </div>
-
         </section>
     )
 };

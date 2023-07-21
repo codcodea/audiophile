@@ -2,16 +2,13 @@
 import TopBanner from './_topbanner';
 import ProductItem from './_product';
 
-const CategoryPage = ({ category, categoryData }) => {
-    
+const CategoryPage = ({ category, data }) => {
     return (
         <>
             <TopBanner category={category}></TopBanner>
-
-            {categoryData.reverse().map(item => {
-                const { id, name, description, isNew, categoryImage, slug } = item;
-                const props = { id, category, slug, name, description, isNew, src: categoryImage, isLeft: item.isLeft, hasCounter: false };
-                return <ProductItem key={item.id} config={props}/>; 
+            {data.reverse().map(item => {
+                const props = { image: item.categoryImage, isLeft: item.isLeft, category, hasCounter: false, ...item };
+                return <ProductItem key={item.id} data={props} />;
             })}
         </>
     )

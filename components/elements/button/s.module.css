@@ -19,7 +19,6 @@
     text-transform: uppercase;
 }
 
-
 .counter {
     composes: button flex;
     min-width: 100px;
@@ -27,17 +26,6 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 0;
-}
-
-.gray {
-    background-color: #fafafa;
-    color: var(--color-black-1);
-    transition: all 0.3s ease-in-out;
-   
-}
-
-.gray:hover {
-    background-color: #f3f3f3;
 }
 
 .minus {
@@ -59,6 +47,15 @@
    
 }
 
+.gray {
+    background-color: #fafafa;
+    color: var(--color-black-1);
+    transition: all 0.3s ease-in-out;
+}
+
+.gray:hover {
+    background-color: #f3f3f3;
+}
 
 .transparent {
     background-color: none;
@@ -116,8 +113,6 @@
     border: 2px solid var(--color-black-1);
 }
 
-
-
 .text {
     composes: button;
     border: 0;
@@ -131,7 +126,7 @@
     color: var(--color-orange-1);
 }
 
-@media only screen and (max-width: 1023px) {
+@media (max-width: 1023px) {
     .filledDynamic {
         composes: outline button;
         background-color: transparent;
@@ -144,7 +139,7 @@
     }
 }
 
-@media only screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
     .filledDynamic {
         composes: button filled black;
         border-radius: 0;

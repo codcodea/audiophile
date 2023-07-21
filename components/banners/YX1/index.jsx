@@ -1,8 +1,6 @@
 
-
-
-import s from './s.module.css'
 import { Button, Subhead } from 'components';
+import s from './s.module.css'
 
 const Banner_YX1 = () => {
 

@@ -1,7 +1,6 @@
 
-
-import s from './s.module.css'
 import { Separator } from 'components'
+import s from './s.module.css'
 
 const TopBanner = ({ category }) => {
     
