@@ -66,5 +66,12 @@ export interface ProductPage {
     others: Others[];
 }
 
+export interface CartProduct {
+    id: number;
+    name: string;
+    image: string;
+    price: number;
+}
+
 export type Database = Record[];
 

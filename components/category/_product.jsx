@@ -1,22 +1,14 @@
 
 import s from './s.module.css';
-import { ProductCard, Ingress, Headline, Body, Button, ButtonCounter } from 'components'
-
+import { ProductCard, Ingress, Headline, Body, Button, StatefulButtons } from 'components'
+import toUSD from '/lib/toUSD';
 
 const ProductItem = ({ config }) => {
 
-    const { isLeft, src, name, description, isNew, hasCounter, price, slug, category } = config;
+    const { id, isLeft, src, name, description, isNew, hasCounter, price, slug, category } = config;
 
-    const localPrice = price?.toLocaleString('en-US',
-        {
-            style: 'currency',
-            currency: 'USD',
-            minimumFractionDigits: 0,
-            maximumFractionDigits: 0
-        });
-    
+    const localPrice = toUSD(price);
     const label = price ? "Add to cart" : "See product";
-
     const absSlug = "/" + category + "/" + slug;
 
     return (
@@ -26,8 +18,8 @@ const ProductItem = ({ config }) => {
             <Body> {description} </Body>
             <h6> {localPrice} </h6>
             <div className={s.button}>
-                {hasCounter && <ButtonCounter />}
-                <Button type="filled" color="orange" slug={absSlug}> {label} </Button>
+                {!hasCounter && <Button type="filled" color="orange" slug={absSlug}> {label} </Button>}
+                {hasCounter && <StatefulButtons slug={absSlug} label={label} id={id} price={price}/>}
             </div>
         </ProductCard>
     )

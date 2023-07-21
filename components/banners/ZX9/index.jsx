@@ -3,7 +3,7 @@ import s from './s.module.css';
 import speaker from 'public/assets/home/desktop/image-speaker-zx9.png';
 import Image from 'next/image';
 
-import { Ingress, Headline, Body, Button, ButtonCounter } from 'components';
+import { Ingress, Headline, Body, Button } from 'components';
 
 const Banner_ZX9 = () => {
 
@@ -25,7 +25,6 @@ const Banner_ZX9 = () => {
 
                         <Body color="white">Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</Body>
                         <Button color="black" type="filled" slug={slug}> SEE PRODUCT </Button>
-                        <ButtonCounter> 1 </ButtonCounter>
                     </div>
                 </div>
 

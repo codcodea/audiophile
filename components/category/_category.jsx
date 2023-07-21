@@ -9,8 +9,8 @@ const CategoryPage = ({ category, categoryData }) => {
             <TopBanner category={category}></TopBanner>
 
             {categoryData.reverse().map(item => {
-                const { name, description, isNew, categoryImage, slug } = item;
-                const props = { category, slug, name, description, isNew, src: categoryImage, isLeft: item.isLeft, hasCounter: false };
+                const { id, name, description, isNew, categoryImage, slug } = item;
+                const props = { id, category, slug, name, description, isNew, src: categoryImage, isLeft: item.isLeft, hasCounter: false };
                 return <ProductItem key={item.id} config={props}/>; 
             })}
         </>

@@ -2,17 +2,19 @@
 "use client"
 
 import s from './s.module.css';
-import { useState } from 'react';
-
 import { handleClick, handleClickZoom } from './_functions';
 
-const ButtonCounter = ({ type = "counter", color = "gray" }) => {
+const ButtonCounter = ({ type = "counter", color = "gray", count, setCount, directUpdate = false, update = null }) => {
 
-    const [count, setCount] = useState(0);
-
-    const h = (e) => handleClick(e, count, setCount);
+    // button on product page update state via button "Add to cart"
+    const h = (e) => handleClick(e, count, setCount, directUpdate);
     const i = (e) => handleClickZoom(e);
  
+    // button inside cart update state directly
+    if(directUpdate) {
+       update();
+    }
+
     const styles = [s[type], s[color], s.font].join(' ');
 
     return <div onClick={i} className={styles}>

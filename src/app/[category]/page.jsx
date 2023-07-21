@@ -2,15 +2,15 @@
 
 import { Category, CategoryBanner, Prefooter } from "components";
 
-export default function CategoryHeadphones({params}) {
+export default function CategoryPage({params}) {
 
     const { category } = params;
 
     return (
-        <main>
+        <>
             <Category category={category} />
             <CategoryBanner />
             <Prefooter />
-        </main>
+        </>
     )
 }

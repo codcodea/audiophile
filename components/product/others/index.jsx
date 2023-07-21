@@ -3,7 +3,7 @@ import s from './s.module.css';
 import Button from 'components/elements/button';
 import Image from 'next/image';
 
-import db from 'db/db.ts';
+import db from 'lib/db';
 
 import { Subhead } from 'components';
 

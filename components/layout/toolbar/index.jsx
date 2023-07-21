@@ -3,7 +3,7 @@ import s from './s.module.css'
 import Logo from '../../elements/logo';
 import Navigation from './nav'
 import Hamburger from './ham';
-import Cart from './cart';
+import CartModal from './cart';
 import Link from 'next/link';
 
 
@@ -24,7 +24,7 @@ const Toolbar = () => {
                 <Navigation />
 
                 <div className={s.cart}>
-                    <Cart />
+                    <CartModal />
                 </div>
 
 

@@ -8,12 +8,14 @@
     width: 20px;
     height: 20px;
     background-image: url('../../../../public/assets/shared/tablet/icon-hamburger.svg');
+    z-index:3;
 }
 
 /* Hamburger menu animation on open */
 
 .hamburgerMenu {
     transition: opacity .3s ease-in-out;
+
 }
 
 .hamburgerIsOpen {

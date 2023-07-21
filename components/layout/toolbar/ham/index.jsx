@@ -3,8 +3,9 @@
 import s from './s.module.css';   
 
 import { useState } from 'react';
-import { useClickAway } from "@uidotdev/usehooks";  // hook for click outside                // css module
-import { navigation } from '../nav';           // navigation array
+import { useClickAway } from "@uidotdev/usehooks";         
+import { navigation } from '../nav';           
+import Link from 'next/link';
 
 const Menu = ({ open = false}) => {
 
@@ -16,7 +17,10 @@ const Menu = ({ open = false}) => {
             <div className={s.pointer}></div>
             <nav className={s.hamburgerNav}>
                 <ul>
-                    {navigation.map((item, index) => <li key={index} >{item}</li>)}
+                    {navigation.map((item, index) => {
+                         const nav = item === "home" ? "/" : "/" + item;
+                         return <Link key={index} href={nav}> <li>{item}</li></Link>
+                    })}
                 </ul>
             </nav>
         </div>

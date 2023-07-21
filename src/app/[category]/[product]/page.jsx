@@ -1,7 +1,6 @@
 
+import ProductPage from 'components/product';
 
-import Product from 'components/product';
-
-const ProductPage = ({ params }) => <Product params={params} />;
-
-export default ProductPage;
+export default function Products({ params }) { 
+    return <ProductPage params={params} /> 
+};

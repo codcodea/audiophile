@@ -1,6 +1,6 @@
 
 import s from './s.module.css'
-import footer from 'db/footer.json'
+import footer from 'lib/db/footer.json'
 
 const Text = () => {
     return (

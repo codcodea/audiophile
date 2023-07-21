@@ -3,7 +3,7 @@
 import s from "./s.module.css";
 
 // Increase or decrease the count
-export const handleClick = (e, count, setCount) => {
+export const handleClick = (e, count, setCount, directUpdate) => {
     if (e.target.className === s.minus) count > 0 && setCount(prev => prev - 1);
     else setCount(prev => prev + 1);
 }

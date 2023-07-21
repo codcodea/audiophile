@@ -2,7 +2,7 @@
 import s from "./s.module.css";
 
 // Sticky toolbar and no overscroll
-export const stickyToolbar = (open) => {
+const stickyToolbar = (open) => {
     const header = document.querySelector("header");
     if (open) {
         header.classList.add(s.sticky);
@@ -12,3 +12,5 @@ export const stickyToolbar = (open) => {
         document.body.style.overscrollBehavior = "auto";
     }
 }
+
+export default stickyToolbar;

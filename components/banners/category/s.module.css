@@ -5,22 +5,21 @@
     align-items: center
 }
 
-.categoryBannerWrapper {
-    display: flex;
+.wrap {
+    composes: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
 
     margin-top: 150px;
     margin-bottom: 150px;
 }
 
-.categoryWrapper {
+.innerWrap {
     position: relative;
     width: 30%;
 }
 
-.categoryBackground {
+.card {
     composes: flex;
     width: 100%;
     aspect-ratio: 3/2;
@@ -31,38 +30,40 @@
 
 .image {
     position: absolute;
+    top: -30%;
+    left: 5%;
     width: 90%;
     height: 90%;
     object-fit: contain;
-    top: -30%;
-    left: 5%;
 }
+
+
 
 
 @media only screen and (max-width: 767px) {
 
-    .categoryWrapper {
-        position: relative;
-        width: 100%;
-        margin-bottom: 30%;
-    }
-
-    .categoryBannerWrapper {
+    .wrap {
         display: flex;
         flex-direction: column;
         margin-top: 200px;
     }
 
-    .categoryBackground {
+    .innerWrap {
+        position: relative;
+        width: 100%;
+        margin-bottom: 30%;
+    }
+
+    .card {
         border-radius: 5%;
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-
+    /* default css */
 }
 
 
 @media only screen and (min-width: 1024px) {
-   /* default css */
+    /* default css */
 }

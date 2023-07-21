@@ -1,8 +1,8 @@
 
 import { createPortal } from 'react-dom';
 
-const Modal = ({ children }) => {
+const Portal = ({ children }) => {
     return createPortal(children, document.body);
 }
 
-export default Modal;
+export default Portal;

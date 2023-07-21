@@ -5,13 +5,13 @@ import Gallery from './gallery'
 import Others from './others'
 import { Prefooter, CategoryBanner } from 'components'
 
-import db from 'db/db.ts'
+import db from 'lib/db'
 
-const Product = async ({ params }) => {
+const ProductPage = async ({ params }) => {
 
     const { category, product } = params;   
 
-    const { features, includes, gallery, others } = db.getProductPage(product);
+    const { id, features, includes, gallery, others } = db.getProductPage(product);
 
     return (
         <>
@@ -25,4 +25,4 @@ const Product = async ({ params }) => {
     )
 }
 
-export default Product;
+export default ProductPage;

@@ -1,10 +1,8 @@
 
 import s from './s.module.css';
-import { Separator } from 'components';
 import Image from 'next/image';
-
 import hero from '@/assets/all/xx99-mark-two-hero.jpg';
-import { Ingress, Headline, Body, Button } from 'components';
+import { Ingress, Headline, Body, Button, Separator } from 'components';
 
 const Hero = () => {
 

@@ -40,27 +40,3 @@ const Features = ({ features, includes }) => {
 }
 
 export default Features;
-
-
-// "includes": [
-//     {
-//       "quantity": 2,
-//       "item": "Earphone unit"
-//     },
-//     {
-//       "quantity": 6,
-//       "item": "Multi-size earplugs"
-//     },
-//     {
-//       "quantity": 1,
-//       "item": "User manual"
-//     },
-//     {
-//       "quantity": 1,
-//       "item": "USB-C charging cable"
-//     },
-//     {
-//       "quantity": 1,
-//       "item": "Travel pouch"
-//     }
-//   ],

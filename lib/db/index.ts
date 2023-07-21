@@ -1,7 +1,6 @@
 
-
 import _db from './data.json'
-import { Record, Database, CategoryPage, ProductPage } from './DB.d';
+import { Record, Database, CategoryPage, ProductPage, CartProduct } from '.';
 
 class DB {
     db: Database;
@@ -45,10 +44,25 @@ class DB {
         };
     }
 
-    getCategoryName(slug : string): string {
+    getCategoryName(slug: string): string {
         const product: Record = this.db.find(item => item.slug === slug);
         return product.category;
-    }   
+    }
+
+    getCartProduct(id: number): CartProduct {
+        const product: Record = this.db.find(item => item.id === id);
+        
+        const wordsToRemove = ["headphones", "speaker", "earphones", "wireless"];
+        const regexPattern = new RegExp(`\\b(${wordsToRemove.join('|')})\\b`, 'gi');
+
+        return {
+            id: product.id,
+            name: product.name.replace(regexPattern, ''),
+            image: "/" + product.image.mobile,
+            price: product.price,
+        };
+    }
+
 }
 
 const db = new DB();

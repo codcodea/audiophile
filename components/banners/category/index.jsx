@@ -1,31 +1,31 @@
 
 import s from './s.module.css';
-import Button from 'components/elements/button';
+import { Button } from 'components';
 import Image from 'next/image';
 
-import headphones from '@/assets/all/category/image-category-thumbnail-headphones.png';
-import speakers from '@/assets/all/category/image-category-thumbnail-speakers.png';
-import earphones from '@/assets/all/category/image-category-thumbnail-earphones.png';
+import hed from '@/assets/all/category/image-category-thumbnail-headphones.png';
+import spe from '@/assets/all/category/image-category-thumbnail-speakers.png';
+import ear from '@/assets/all/category/image-category-thumbnail-earphones.png';
 
 const Category = ({ img, text }) => {
     return (
-        <div className={s.categoryWrapper}>
-            <div className={s.categoryBackground}>
+        <article className={s.innerWrap}>
+            <div className={s.card}>
                 <Image className={s.image} src={img} alt="category_label" />
                 <h6>{text}</h6>
                 <Button type="text"> SHOP &gt;</Button>
             </div>
-        </div>
+        </article>
     )
 }
 
 
 const CategoryBanner = () => {
     return (
-        <section className={s.categoryBannerWrapper}>
-            <Category img={headphones} text="headphones" />
-            <Category img={speakers} text="speakers" />
-            <Category img={earphones} text="earphones" />
+        <section className={s.wrap}>
+            <Category img={hed} text="headphones" />
+            <Category img={spe} text="speakers" />
+            <Category img={ear} text="earphones" />
         </section>
     )
 }

@@ -12,11 +12,9 @@ export default function HomeLayout({ children }) {
     return (
         <html lang="en">
             <body className={manrope.className}>
-                <main>
-                    <Toolbar />
-                        {children}
-                    <Footer />
-                </main>
+                <Toolbar />
+                {children}
+                <Footer />
             </body>
         </html>
     )
