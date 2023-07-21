@@ -5,7 +5,7 @@ import Toolbar from "./layout/toolbar";
 import Footer from "./layout/footer";
 import Navigation from "./layout/toolbar/nav";
 import Cart from "./layout/toolbar/cart/_cart";
-import CartItem from "./layout/toolbar/cart/_cartItem";
+import CartItem from "./layout/toolbar/cart/_cartitem";
 
 import Logo from "./elements/logo";
 import Social from "./elements/social";

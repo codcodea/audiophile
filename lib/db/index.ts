@@ -1,6 +1,6 @@
 
 import _db from './data.json'
-import { Record, Database, CategoryPage, ProductPage, CartProduct } from '.';
+import { Record, Database, CategoryPage, ProductPage, CartProduct } from './DB';
 
 class DB {
     db: Database;
