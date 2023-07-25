@@ -1,11 +1,11 @@
-.flex {
+%flex {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.button {
+%button {
     display: inline;
     outline: none;
     border: none;
@@ -17,7 +17,8 @@
 }
 
 .counter {
-    composes: button flex;
+    @extend %button;
+    @extend %flex;
     min-width: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -26,22 +27,21 @@
 }
 
 .minus {
-    composes: flex;
+    @extend %flex;
     width: auto;
     font-size: 1.3em;
 }
 
 .number {
-    composes: flex;
+    @extend %flex;
     width: 100%;
     font-size: 1em;
     font-weight: 700;
 }
 
 .plus {
-    composes: flex;
+    @extend %flex;
     font-size: 1.3em;
-
 }
 
 .gray {
@@ -94,15 +94,19 @@
 }
 
 .filled {
-    composes: button;
+    @extend %button;
+    transition: all 0.3s ease-in-out;
+}
+
+%outline {
+    @extend %button;
+    border: 1px solid var(--color-black-1);
+    border-radius: 4px;
     transition: all 0.3s ease-in-out;
 }
 
 .outline {
-    composes: button;
-    border: 1px solid var(--color-black-1);
-    border-radius: 4px;
-    transition: all 0.3s ease-in-out;
+    @extend %outline;
 }
 
 .outline:hover {
@@ -111,7 +115,7 @@
 }
 
 .text {
-    composes: button;
+    @extend %button;
     border: 0;
     background-color: transparent;
     color: var(--color-button-gray);
@@ -122,37 +126,45 @@
     color: var(--color-orange-1);
 }
 
-@media (max-width: 767px) {}
+.filledDynamic {
+    @extend %button; 
 
-@media (min-width: 768px) and (max-width: 1023px) {}
+    font-weight: 600;
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+
+    & span {
+        color: var(--color-black-1);
+    }
+}
+
+.filledDynamic:hover {
+    background-color: transparent;
+}
 
 
 @media (max-width: 1023px) {
     .filledDynamic {
-        composes: outline button;
-        background-color: transparent;
-
-        font-weight: 600;
-
-        & span {
-            color: var(--color-black-1);
-        }
+        // outline
+        border: 1px solid var(--color-black-1);
+        border-radius: 4px;
     }
 
     .filledDynamic:hover {
         background-color: transparent;
+        scale: 1.05;
     }
 }
 
 @media (min-width: 1024px) {
     .filledDynamic {
-        composes: button filled black;
+        // black
+        background-color: var(--color-black-1);
         border-radius: 0;
 
         & span {
-            color: white;
+            color: var(--color-white-1);
         }
-
     }
 
     .filledDynamic:hover {

@@ -20,7 +20,7 @@ const Banner_ZX9 = () => {
                             <h4>Speaker </h4>
                         </div>
                         <p>{body}</p>
-                        <Button color="black" type="filledDynamic" slug={slug}>
+                        <Button color="black" type="filled" slug={slug}>
                             <span className="button-font"> SEE PRODUCT </span>
                         </Button>
                     </div>
