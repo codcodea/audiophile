@@ -1,9 +1,8 @@
 
-import Category from 'components/category'
 import Features from './features'
 import Gallery from './gallery'
 import Others from './others'
-import { Prefooter, CategoryBanner } from 'components'
+import { Prefooter, CategoryBanner, ProductFactory, GoBack } from 'components'
 
 import db from 'lib/db'
 
@@ -15,7 +14,8 @@ const ProductPage = async ({ params }) => {
 
     return (
         <>
-            <Category product={product} />
+            <GoBack />
+            <ProductFactory product={product} />
             <Features features={features} includes={includes}/>
             <Gallery images={gallery} />
             <Others others={others} category={category}/>

@@ -1,11 +1,11 @@
 
 import s from './s.module.css'
-import footer from 'lib/db/footer.json'
+import { footer } from 'lib/db/texts'
 
 const Text = () => {
     return (
         <div className={s.textWrapper}>
-            <p className={s.text}>{footer.text}</p>
+            <p className={s.text}>{footer}</p>
         </div>
     );
 }

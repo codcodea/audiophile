@@ -1,17 +1,14 @@
-
 "use client"
 
-import s from './sss.module.css'
-import { Cart } from '..';
-
-import { useState } from 'react';
 import Confirmation from './confirmation';
 import useStore from 'lib/store';
+import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useClickAway } from "@uidotdev/usehooks";
+import { Cart } from '..';
+import s from './s.module.css'
 
 const Summary = () => {
-
     const router = useRouter();
 
     const [isOpen, setOpen] = useState(false);

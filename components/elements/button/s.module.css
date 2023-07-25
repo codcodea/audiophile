@@ -11,10 +11,8 @@
     outline: none;
     border: none;
     cursor: pointer;
-    padding: 1em;
     min-width: 120px;
     min-height: 40px;
-    font-size: 0.7em;
     user-select: none;
     text-transform: uppercase;
 }
@@ -117,7 +115,6 @@
     composes: button;
     border: 0;
     background-color: transparent;
-    font-weight: 700;
     color: var(--color-button-gray);
     transition: all 0.3s ease-in-out;
 }
@@ -125,6 +122,15 @@
 .text:hover {
     color: var(--color-orange-1);
 }
+
+@media (max-width: 767px) {
+ 
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  
+}
+
 
 @media (max-width: 1023px) {
     .filledDynamic {

@@ -1,6 +1,5 @@
 
-
-import s from './sss.module.css';
+import s from './s.module.css';
 import Form from './_form';
 import Summary from './_summary';
 

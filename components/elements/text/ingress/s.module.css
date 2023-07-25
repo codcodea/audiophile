@@ -7,14 +7,6 @@
 }
 
 .textIngress {
-    container-type: inline-size;
-    container-name: ingress;
     width: 100%;
 }
 
-@container ingress (min-width: 0px) {
-    .font {
-        font-size: 5cqw;
-        letter-spacing: 1cqw;
-    }
-}

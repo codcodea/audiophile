@@ -7,23 +7,21 @@
 
 .header {
     background-color: var(--color-black-1);
-    position: static;
 }
 
-.toolbar {
+.section {
     display: grid;
     grid-template-columns: 2fr 5fr 2fr;
-    height: 97px;
+    height: 85px;
     background-color: var(--color-black-1);
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0 auto; 
 }
 
 .logo {
     grid-column: 1;
     composes: flex;
-    object-position: center center;
-    /* border: 1px solid red; */
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .hamburger {
@@ -31,7 +29,6 @@
     grid-column: 1;
     align-items: center;
     justify-content: center;
-    /* border: 1px solid red; */
 }
 
 .nav {
@@ -47,7 +44,7 @@
     justify-content: center;
     align-items: center;
     list-style: none;
-    transition: background-color .3s ease-in-out, scale .3s ease-in-out;
+    transition: background-color .2s ease-in-out, scale .2s ease-in-out;
     color: var(--color-white-0);
 }
 
@@ -59,31 +56,28 @@
 .li {
     composes: list-base;
     padding: 0;
-    margin: 0 1em;
+    margin: 0;
     cursor: default;
-    font-size: 12px;
+    font-size: 13px;
     text-transform: uppercase;
-    /* border: 1px solid red; */
+    letter-spacing: 2px;
+    width: 80px;
 }
 
 .li:hover {
-    scale: 1.1;
+    scale: 1.05;
     color: var(--color-orange-0);
+    font-weight: 600;
 }
 
-
 .cart {
-    /* svg element needs flex */
     composes: flex;
     grid-column: 3;
     color: white;
-    /* border: 1px solid red; */
 }
 
-@media only screen and (max-width: 767px) {
-
-
-    .toolbar {
+@media (max-width: 767px) {
+    .section {
         display: grid;
         grid-template-columns: 110px auto 110px;
     }
@@ -124,9 +118,8 @@
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-
-    .toolbar {
+@media (min-width: 768px) and (max-width: 1023px) {
+    .section {
         display: grid;
         grid-template-columns: 60px 5fr 2fr;
     }
@@ -161,8 +154,7 @@
     }
 }
 
-
-@media only screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
     .logo {
         grid-column: 1;
     }
@@ -175,5 +167,4 @@
     .cart {
         align-items: flex-end;
     }
-
 }

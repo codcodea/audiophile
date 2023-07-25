@@ -9,14 +9,11 @@ const Banner_YX1 = () => {
     return (
         <section>
             <article className={s.wrap}>
-
                 <div className={s.image} />
-
                 <div className={s.text}>
                     <Subhead color="black">YX1 Earphones </Subhead>
                     <Button type="filledDynamic" slug={slug}> SEE PRODUCT </Button>
                 </div>
-
             </article>
         </section>
     )

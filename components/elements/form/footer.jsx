@@ -1,15 +1,15 @@
 
 import s from './s.module.css';
-import footerText from 'lib/db/footer';
+import { footer } from 'lib/db/texts';
 import footerIcon from '/public/assets/checkout/icon-cash-on-delivery.svg'
 import Image from 'next/image';
 
 const CheckoutFooter = () => {
     return (
         <footer className={s.footer}>
-        <Image src={footerIcon} alt="cash_on_delivery" width={35} height={35}/>
-        <p>{footerText.checkout}</p>
-    </footer>
+            <Image src={footerIcon} alt="cash_on_delivery" width={35} height={35} />
+            <p>{footer}</p>
+        </footer>
     )
 }
 

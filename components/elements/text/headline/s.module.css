@@ -7,14 +7,9 @@
 }
 
 .textHeadline {
-    container-type: inline-size;
-    container-name: headline;
     width: 100%;
-    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@container headline (min-width: 0px) {
-    .font {
-        font-size: 11cqw;
-    }
-}

@@ -3,7 +3,6 @@ import Image from "next/image";
 import s from "./s.module.css";
 
 const Gallery = ({ images }) => {
-
     const { first, second, third } = images;
 
     return (

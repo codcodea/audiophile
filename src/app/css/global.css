@@ -20,11 +20,9 @@
     --color-orange-0: #FBAF85;
     --color-orange-1: #D87D4A;
     --color-button-gray: #6e6e6e;
-    /* --color-site-background: rgb(253, 253, 253); */
     --color-site-background: white;
     --hero-gray: #4e4e4e;
-    --paragraph-gray: #393939;
-
+    --paragraph-gray: #909090;
     --site-max-width: 1580px;
     --checkout-gray:  #919191;
     --checkout-bg: #eaeaea;
@@ -35,18 +33,11 @@ body {
     background-color: white;
 }
 
-/* div, section, nav {
-    border: 1px solid salmon;
-} */
-
 a {
     color: inherit;
     text-decoration: none;
 }
 
-main {
-    background-color: var(--color-site-background);
-}
 
 
 

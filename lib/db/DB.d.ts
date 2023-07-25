@@ -1,5 +1,4 @@
 
-
 type Image = {
     mobile: string;
     tablet: string;
@@ -57,7 +56,7 @@ export interface ProductPage {
     name: string;
     category: string;
     image: string; // tablet
-    new: boolean;
+    isNew: boolean;
     price: number;
     description: string;
     features: string;

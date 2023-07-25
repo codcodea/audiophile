@@ -1,8 +1,6 @@
-
 import s from "./s.module.css"
 
 const Headline = ({ color, className, children }) => {
-
     const h = [s.textHeadline, className].join(' ');
     const b = [s[color], s.font].join(' ');
     

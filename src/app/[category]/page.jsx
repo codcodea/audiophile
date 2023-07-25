@@ -1,14 +1,12 @@
 
-
-import { Category, CategoryBanner, Prefooter } from "components";
+import { ProductFactory, CategoryBanner, Prefooter } from "components";
 
 export default function CategoryPage({params}) {
-
     const { category } = params;
 
     return (
         <>
-            <Category category={category} />
+            <ProductFactory category={category} />
             <CategoryBanner />
             <Prefooter />
         </>

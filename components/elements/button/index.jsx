@@ -8,7 +8,7 @@ const Button = ({ type, color, className, slug = "/", onClick = null, children }
 
     const button = onClick == null
         ? <Link href={slug}> <button className={styles}> {children} </button></Link>
-        : <button id="butti" onClick={onClick} className={styles}> {children} </button>;
+        : <button onClick={onClick} className={styles}> {children} </button>;
 
     return button;
 }

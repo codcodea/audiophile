@@ -2,10 +2,13 @@
 import Image from 'next/image';
 import heroImg from '@/assets/all/xx99-mark-two-hero.jpg';
 import s from './s.module.css';
-import { hero } from 'lib/db/footer';
-import { Ingress, Headline, Body, Button, Separator } from 'components';
+import { hero } from 'lib/db/texts';
+import { Ingress, Headline, Body, Button, Separator, ProductFactory } from 'components';
 
 const HeroBanner = () => {
+
+    const slug = "/headphones/xx99-mark-one-headphones";
+
     return (
         <div className={s.wrap}>
             <Separator />
@@ -14,20 +17,19 @@ const HeroBanner = () => {
                     <div className={s.textWrap}>
                         <div className={s.text}>
                             <div className={s.ingressWrap}>
-                                <Ingress color="gray"> NEW PRODUCT </Ingress>
+                                <span className="overline"> NEW PRODUCT </span>
                             </div>
-
                             <div className={s.headWrap}>
-                                <Headline color="white">XX99 MARK II </Headline>
-                                <Headline color="white">Headphones </Headline>
+                                <h1 >XX99 MARK II </h1>
+                                <h1 >Headphones </h1>
                             </div>
-
                             <div className={s.bodyWrap}>
-                                <Body color="gray">{hero}</Body>
+                                <p color="gray">{hero}</p>
                             </div>
-
                             <div className={s.buttonWrap}>
-                                <Button slug="/headphones/xx99-mark-one-headphones" color="orange" type="filled"> SEE PRODUCT </Button>
+                                <Button slug={slug} color="orange" type="filled"> 
+                                    <span className="button-font"> SEE PRODUCT </span>
+                                </Button>
                             </div>
                         </div>
                     </div>

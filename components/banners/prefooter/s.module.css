@@ -1,0 +1,29 @@
+
+.h1 {
+    color: var(--color-orange-1); 
+    display: inline; 
+}
+
+.extraMargin {
+    margin: 150px 0;
+}
+
+.section {
+    margin: 15vh auto;
+    /* border: 1px solid red; */
+}
+
+@media (max-width: 767px) {
+  
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .section h1 {
+       font-size: 250%;
+       margin: 1em 0;
+    }
+
+    .section p {
+        width: 70%;
+     }
+}

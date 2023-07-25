@@ -28,13 +28,17 @@ class DB {
     getProductPage(productSlug: string): ProductPage {
         const product: Record = this.db.find(item => item.slug === productSlug);
 
+        if (!product) {
+            return null;
+        }
+
         return {
             id: product.id,
             slug: product.slug,
             category: product.category,
             name: product.name,
-            image: "/" + product.image.tablet,
-            new: product.new,
+            image: "/" + product.categoryImage.tablet,
+            isNew: product.new,
             price: product.price,
             description: product.description,
             features: product.features,

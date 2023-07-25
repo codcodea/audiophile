@@ -1,4 +1,3 @@
-
 import Category from './_category';
 import s from './s.module.css';
 
@@ -8,7 +7,7 @@ import earphone from '@/assets/all/category/image-category-thumbnail-earphones.p
 
 const CategoryBanner = () => {
     return (
-        <section className={s.wrap}>
+        <section className={s.section}>
             <Category img={headphone} text="headphones" />
             <Category img={speaker} text="speakers" />
             <Category img={earphone} text="earphones" />

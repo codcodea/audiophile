@@ -2,10 +2,12 @@ main {
     min-height: 100vh;
     margin: 0 auto;
     background-color: var(--color-site-background);
+    max-width: var(--site-max-width);
 }
 
 section {
-    margin: 15vh auto;
+    margin: 10vh auto 15vh auto;
+    max-width: var(--site-max-width);
 }
 
 header {
@@ -19,31 +21,20 @@ footer {
 }
 
 @media (max-width: 767px) {
-    main {
-        width: 100vw;
-    }
-
     section {
+        margin: 5vh auto;
         max-width: 90%;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-    main  {
-        width: 100vw;
-    }
-
     section {
         width: 90%;
     }
 }
 
 @media (min-width: 1024px) {
-    main  {
-        max-width: var(--site-max-width);
-    }
-
     section {
-        width: 80%;
+        width: 90%;
     }
 }

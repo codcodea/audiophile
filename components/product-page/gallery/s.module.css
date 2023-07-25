@@ -1,16 +1,21 @@
 .section {
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 2fr 3fr;
     grid-template-rows: auto auto;
-    gap: 5%;
     aspect-ratio: 16/9;
+    /* border: 3px solid saddlebrown; */
+    gap: 2vw;
 }
 
 .img {
-    object-fit: cover;
     position: relative;
     width: 100%;
     height: auto;
+    object-fit: contain;
+}
+
+.img img {
+    border-radius: 6px;
 }
 
 .img1 {
@@ -38,11 +43,14 @@
         grid-template-rows: 1fr 1fr 2fr;
         gap: 5%;
         height: 1200px;
+        margin: 10vh auto;
+       
     }
     
     .img1 {
         width: 100%;
         height: 100%;
+        
     }
     
     .img2 {

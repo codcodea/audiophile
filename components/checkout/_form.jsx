@@ -1,7 +1,6 @@
-
 "use client"
 
-import s from './sss.module.css';
+import s from './s.module.css';
 import { useState } from 'react';
 import { TextField, Radio, CheckoutFooter } from '..';
 import p from './_placeholder'

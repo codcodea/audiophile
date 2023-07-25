@@ -1,8 +1,6 @@
-
 import s from './s.module.css';
 
 const Subhead = ({ color, className, children }) => {
-
     const h = [s.textSubhead, className].join(' '); 
     const b = [s[color], s.font, className].join(' ');
 

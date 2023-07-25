@@ -1,5 +1,3 @@
-
-
 import s from './s.module.css';
 
 export const Facebook = ({width = 24}) => {

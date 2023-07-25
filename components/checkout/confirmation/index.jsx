@@ -1,17 +1,14 @@
 "use client"
 
-import s from './s.module.css';
-
+import { forwardRef, useEffect } from 'react';
 import { Modal, stickyToolbar, Button } from 'components'
-import { forwardRef } from 'react';
-import { useEffect } from 'react';
-
 
 import Image from 'next/image';
 import checkMark from 'public/assets/checkout/icon-order-confirmation.svg';
 
 import useStore from '/lib/store';
 import toUSD from '/lib/toUSD';
+import s from './s.module.css';
 
 function Confirmation({ onClick }, ref) {
 

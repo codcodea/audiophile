@@ -8,7 +8,7 @@
     width: 20px;
     height: 20px;
     background-image: url('../../../../public/assets/shared/tablet/icon-hamburger.svg');
-    z-index:3;
+    z-index: 3;
 }
 
 /* Hamburger menu animation on open */
@@ -55,20 +55,19 @@
     left: -5px;
 }
 
-        .hamburgerNav ul {
-            user-select: none;
-        }
+.hamburgerNav ul {
+    user-select: none;
+}
 
-        .hamburgerNav li {
+.hamburgerNav li {
 
-            font-size: 12px;
-            padding: 10px;
-            text-transform: uppercase;
-            transition: background-color .3s ease-in-out, font-size .4s ease-in-out;
-        }
+    font-size: 12px;
+    padding: 10px;
+    text-transform: uppercase;
+    transition: background-color .3s ease-in-out, font-size .4s ease-in-out;
+}
 
-        .hamburgerNav li:hover {
-            font-size: 14px;
-            color: var(--color-orange-1);
-        }
-
+.hamburgerNav li:hover {
+    font-size: 14px;
+    color: var(--color-orange-1);
+}

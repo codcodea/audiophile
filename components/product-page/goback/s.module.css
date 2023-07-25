@@ -1,0 +1,43 @@
+.section {
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section p {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    height: 20px;
+    margin: 0.5em 0 0 0;
+    text-align: left;
+    font-weight: 400;
+    letter-spacing: 0;
+    font-size: 1.1em;
+    text-transform: none;
+    color: #979797;
+    transition: all 0.25s ease-in-out;
+}
+
+.section p:hover {
+    font-size: 1.2em;
+    color: var(--color-orange-0);
+}
+
+.section button {
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width: 1024px){
+    .section {
+       display: none;
+    }
+}

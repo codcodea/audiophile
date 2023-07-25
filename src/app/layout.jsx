@@ -13,7 +13,7 @@ export default function HomeLayout({ children }) {
         <html lang="en">
             <body className={manrope.className}>
                 <Toolbar />
-                {children}
+                    <main>{children}</main>
                 <Footer />
             </body>
         </html>

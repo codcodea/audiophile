@@ -5,43 +5,38 @@ import Image from 'next/image';
 
 import db from 'lib/db';
 
-import { Subhead } from 'components';
-
 const Other = ({ slug, text, image }) => {
-
     return (
         <div className={s.cardWrapper}>
             <div className={s.imageWrapper}>
                 <Image className={s.image} fill sizes="50%" src={"/" + image} alt="others_label" />
             </div>
-            <h6 className={s.header}>{text}</h6>
+            <h5 className={s.header}>{text}</h5>
             <div className={s.buttonWrapper}>
-               <Button className={s.button} slug={slug} type="filled" color="orange"> See Product</Button>
+                <Button slug={slug} type="filled" color="orange">
+                    <span className="button-font">See Product</span>
+                </Button>
             </div>
         </div>
-
     )
 }
 
 
 const Others = async ({ others }) => {
-
     return (
         <section className={s.section}>
 
             <div className={s.headWrapper}>
-                <Subhead> You may also like </Subhead>
+                <h1 className={s.header}> You may also like </h1>
             </div>
 
             <div className={s.otherWrapper}>
                 {others.map((item) => {
-
                     const { slug, name, image } = item;
                     const category = db.getCategoryName(slug)
-
                     const absSlug = "/" + category + "/" + slug;
 
-                    return <Other key={absSlug} slug={absSlug} text={name} image={image.desktop} />
+                    return <Other key={absSlug} slug={absSlug} text={name} image={image.mobile} />
                 })}
             </div>
         </section>

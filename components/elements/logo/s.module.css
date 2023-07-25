@@ -1,13 +1,12 @@
-
-
 .logoWrapper{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 75px;
     cursor: default;
 }
 
 .logo {
+    width: 143px;
+    height: auto;
     user-select: none;
 }

@@ -7,18 +7,21 @@ const ProductItem = ({ data }) => {
 
     const { id, isLeft, image, name, description, isNew, hasCounter, price, slug, category } = data;
 
+    const isCategory = !!price ? false : true;
+    const label = isCategory ? "See product" : "Add to cart";
+    const styles = isCategory ? s.textAlignCenter : s.textAlignLeft
+
     const localPrice = toUSD(price);
-    const label = price ? "Add to cart" : "See product";
     const absSlug = "/" + category + "/" + slug;
 
     return (
-        <ProductCard isLeft={isLeft} src={image}>
-            {isNew && <Ingress color="orange"> New Product </Ingress>}
-            <Headline>{name}</Headline>
-            <Body> {description} </Body>
+        <ProductCard isLeft={isLeft} src={image} alignCenter={isCategory}>
+            {isNew && <span className="overline"> New Product </span>}
+            <h1>{name}</h1>
+            <p> {description} </p>
             <h6> {localPrice} </h6>
-            <div className={s.button}>
-                {!hasCounter && <Button type="filled" color="orange" slug={absSlug}> {label} </Button>}
+            <div className={styles}>
+                {!hasCounter && <Button type="filled" color="orange" slug={absSlug}> <span className="button-font">{label}</span> </Button>}
                 {hasCounter && <StatefulButtons slug={absSlug} label={label} id={id} price={price} />}
             </div>
         </ProductCard>

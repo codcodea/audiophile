@@ -11,13 +11,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
- 
+    /* border: 1px solid red; */
+    height: max-content;
 }
 
 .headWrapper {
     width: 50%;
     margin-bottom: 3vh;
-
 }
 
 .otherWrapper {
@@ -26,6 +26,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    /* border: 1px solid red; */
 }
 
 .cardWrapper {
@@ -56,7 +57,6 @@
     text-align: center;
     margin: 0;
     padding: 2vh 0;
-  
 }
 
 .buttonWrapper {
@@ -65,17 +65,36 @@
     grid-column: 1;
 }
 
-.button {
-    width: inherit;
-}
-
-
 @media only screen and (max-width: 767px) {
+
+    .headWrapper {
+        width: 100%;
+    }
 
     .otherWrapper {
         position: relative;
         width: 100%;
-        margin-bottom: 30%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        /* border: 1px solid red; */
+    }
+
+    .cardWrapper {
+        width: 100%;
+        /* border: 1px solid red; */
+        margin-bottom: 5vh;
+    }
+
+    .imageWrapper {
+        width: 100%;
+        aspect-ratio: 22/9;
+        /* border: 1px solid rgb(0, 4, 255); */
+    }  
+
+    .image {
+        object-fit: fill;
+        border-radius: 2%;
     }
 
     .otherBannerWrapper {
@@ -85,7 +104,7 @@
     }
 
     .otherBackground {
-        border-radius: 5%;
+        border-radius: 2%;
     }
 }
 
