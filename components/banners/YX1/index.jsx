@@ -1,6 +1,6 @@
 
 import { Button, Subhead } from 'components';
-import s from './s.module.css'
+import s from './s.module.scss'
 
 const Banner_YX1 = () => {
 
@@ -11,8 +11,10 @@ const Banner_YX1 = () => {
             <article className={s.wrap}>
                 <div className={s.image} />
                 <div className={s.text}>
-                    <Subhead color="black">YX1 Earphones </Subhead>
-                    <Button type="filledDynamic" slug={slug}> SEE PRODUCT </Button>
+                    <h4>YX1 Earphones </h4>
+                    <Button color="black" type="filledDynamic" slug={slug}> 
+                            <span className="button-font"> SEE PRODUCT </span>
+                    </Button>
                 </div>
             </article>
         </section>

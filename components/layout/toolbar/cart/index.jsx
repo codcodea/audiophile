@@ -1,6 +1,6 @@
 "use client"
 
-import s from './s.module.css';
+import s from './s.module.scss';
 import { Modal, stickyToolbar, Cart } from 'components'
 import { useEffect, useState } from 'react';
 import { useClickAway } from "@uidotdev/usehooks";

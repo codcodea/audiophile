@@ -1,6 +1,6 @@
 
 
-import s from './s.module.css'
+import s from './s.module.scss'
 import Image from 'next/image'
 
 const ProductCard = async ({ isLeft, alignCenter = false, src, children }) => {

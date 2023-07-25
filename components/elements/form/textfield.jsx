@@ -1,7 +1,7 @@
 
 "use client"
 
-import s from './s.module.css'
+import s from './s.module.scss'
 
 const TextField = ({ label, placeholder }) => {
 
@@ -11,8 +11,8 @@ const TextField = ({ label, placeholder }) => {
     }
 
     return (
-        <div className={s.wrap}>
-            <label className={s.label}>{label}</label>
+        <div className={s.textWrapper}>
+            <label>{label}</label>
             <input autoComplete="off" spellCheck={false} onBlur={handleBlur} className={s.textInput} type="text" placeholder={placeholder} />
         </div>
     )

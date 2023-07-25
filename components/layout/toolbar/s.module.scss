@@ -7,14 +7,14 @@
 
 .header {
     background-color: var(--color-black-1);
-}
 
-.section {
-    display: grid;
-    grid-template-columns: 2fr 5fr 2fr;
-    height: 85px;
-    background-color: var(--color-black-1);
-    margin: 0 auto; 
+    & section {
+        display: grid;
+        grid-template-columns: 2fr 5fr 2fr;
+        height: 85px;
+        background-color: var(--color-black-1);
+        margin: 0 auto;
+    }
 }
 
 .logo {
@@ -77,9 +77,12 @@
 }
 
 @media (max-width: 767px) {
-    .section {
-        display: grid;
-        grid-template-columns: 110px auto 110px;
+
+    .header {
+        & section {
+            display: grid;
+            grid-template-columns: 110px auto 110px;
+        }
     }
 
     .list-base {
@@ -119,15 +122,17 @@
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-    .section {
-        display: grid;
-        grid-template-columns: 60px 5fr 2fr;
+
+    .header {
+        & section {
+            display: grid;
+            grid-template-columns: 60px 5fr 2fr;
+        }
     }
 
     .nav {
         display: none;
     }
-
 
     .ul {
         /* footer  */

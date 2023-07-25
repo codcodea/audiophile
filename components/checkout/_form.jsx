@@ -1,6 +1,6 @@
 "use client"
 
-import s from './s.module.css';
+import s from './s.module.scss';
 import { useState } from 'react';
 import { TextField, Radio, CheckoutFooter } from '..';
 import p from './_placeholder'
@@ -8,7 +8,6 @@ import p from './_placeholder'
 const Form = () => {
 
     const [payment, setPayment] = useState("e-money");
-
     const handleRadio = (e) => setPayment(e.target.value);
 
     const paymentMethod = payment == "e-money"
@@ -23,7 +22,6 @@ const Form = () => {
         : <CheckoutFooter />;
 
     return (
-
         <form autoComplete="off" className={s.form}>
             <h4> Checkout</h4>
 

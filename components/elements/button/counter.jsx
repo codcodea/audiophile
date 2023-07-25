@@ -1,7 +1,7 @@
 
 "use client"
 
-import s from './s.module.css';
+import s from './s.module.scss';
 import { handleClick, handleClickZoom } from './_functions';
 
 const ButtonCounter = ({ type = "counter", color = "gray", count, setCount, directUpdate = false, update = null }) => {

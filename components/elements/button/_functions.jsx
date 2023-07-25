@@ -1,6 +1,6 @@
 
 
-import s from "./s.module.css";
+import s from "./s.module.scss";
 
 // Increase or decrease the count
 export const handleClick = (e, count, setCount, directUpdate) => {

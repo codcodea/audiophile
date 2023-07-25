@@ -1,4 +1,4 @@
-import s from './s.module.css';
+import s from './s.module.scss';
 
 export const Facebook = ({width = 24}) => {
     return (

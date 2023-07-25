@@ -1,6 +1,6 @@
 
 import Portal from './_portal';
-import s from './s.module.css';
+import s from './s.module.scss';
 
 const Modal = ({ children }) => {
     return (

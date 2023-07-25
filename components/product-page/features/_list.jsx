@@ -1,6 +1,6 @@
 
 import { Body } from 'components';
-import s from './s.module.css';
+import s from './s.module.scss';
 
 const List = ({ list, className }) => {
     
@@ -10,7 +10,7 @@ const List = ({ list, className }) => {
         return (
             <div key={item.itemName} className={styles}>
                 <p className={s.quantity}> {item.quantity}x </p>
-                <Body className={s.itemName} size="sm"> {item.item} </Body>
+                <p className={s.itemName}> {item.item} </p>
             </div>
         )
     })

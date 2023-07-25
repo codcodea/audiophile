@@ -1,7 +1,7 @@
 
 // Line separator on top of the page
 
-import s from './s.module.css';
+import s from './s.module.scss';
 
-const Separator = () => <section className={s.sectionOverride}> <div className={s.separator} /></section>
+const Separator = () => <section className={s.section}> <div/> </section>
 export default Separator;

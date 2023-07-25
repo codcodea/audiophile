@@ -2,7 +2,7 @@
 "use client"
 
 import { useRouter } from 'next/navigation';
-import s from './s.module.css';
+import s from './s.module.scss';
 
 import useStore from 'lib/store';
 import toUSD from 'lib/toUSD';

@@ -1,8 +1,4 @@
-
-
-
-
-import s from './inbox.module.css';
+import s from './s.module.css';
 
 const Inbox = ({includes}) => {
 
@@ -19,22 +15,3 @@ const Inbox = ({includes}) => {
 
 export default Inbox;
 
-
-// "includes": [
-//     {
-//       "quantity": 1,
-//       "item": "Headphone unit"
-//     },
-//     {
-//       "quantity": 2,
-//       "item": "Replacement earcups"
-//     },
-//     {
-//       "quantity": 1,
-//       "item": "User manual"
-//     },
-//     {
-//       "quantity": 1,
-//       "item": "3.5mm 5m audio cable"
-//     }
-//   ],

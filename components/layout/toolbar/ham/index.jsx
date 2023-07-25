@@ -1,6 +1,6 @@
 "use client"
 
-import s from './s.module.css';   
+import s from './s.module.scss';   
 
 import { useState } from 'react';
 import { useClickAway } from "@uidotdev/usehooks";         
@@ -8,7 +8,6 @@ import { navigation } from '../nav';
 import Link from 'next/link';
 
 const Menu = ({ open = false}) => {
-
     let hamClass = open ? s.hamburgerOpen : s.hamburgerClosed;
     const styles = [s.hamburgerMenu, hamClass].join(' ');
 
@@ -28,14 +27,13 @@ const Menu = ({ open = false}) => {
 }
 
 function Hamburger () {
-    
     const [open, setOpen] = useState(true);
     const ref = useClickAway(() => setOpen(false));
 
     const handleClick = () => setOpen(state => !state)
 
     return (
-        <div ref={ref} onClick={handleClick} className={s.hamburgerIcon}>
+        <div ref={ref} onClick={handleClick} className={s.hamburger}>
             <Menu open={open} />
         </div>
     );

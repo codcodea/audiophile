@@ -1,6 +1,6 @@
 
 import Image from "next/image";
-import s from "./s.module.css";
+import s from "./s.module.scss";
 
 const Gallery = ({ images }) => {
     const { first, second, third } = images;

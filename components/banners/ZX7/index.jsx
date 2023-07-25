@@ -1,5 +1,5 @@
 import { Button, Subhead } from 'components';
-import s from './s.module.css'
+import s from './s.module.scss'
 
 const Banner_ZX7 = () => {
     const slug = "/speakers/zx7-speaker";
@@ -8,8 +8,10 @@ const Banner_ZX7 = () => {
         <section>
             <div className={s.wrap}>
                 <div className={s.text}>
-                    <Subhead color="black">ZX7 Speaker </Subhead>
-                    <Button type="filledDynamic" slug={slug}> SEE PRODUCT </Button>
+                    <h4 color="black">ZX7 Speaker </h4>
+                    <Button color="black" type="filledDynamic" slug={slug}> 
+                            <span className="button-font"> SEE PRODUCT </span>
+                    </Button>
                 </div>
             </div>
         </section>

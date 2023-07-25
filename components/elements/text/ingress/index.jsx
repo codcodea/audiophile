@@ -1,4 +1,4 @@
-import s from './s.module.css'
+import s from './s.module.scss'
 
 const Ingress = ({ color, className, children }) => {
     const h = [s.textIngress, className].join(' ');

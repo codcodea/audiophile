@@ -1,5 +1,5 @@
 
-import s from './s.module.css'
+import s from './s.module.scss'
 import { footer } from 'lib/db/texts'
 
 const Text = () => {

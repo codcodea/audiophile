@@ -1,4 +1,4 @@
-import s from "./s.module.css"
+import s from "./s.module.scss"
 
 const Body = ({ color, className, size = "md", children }) => {
     const h = [s.textBody, className].join(' ');

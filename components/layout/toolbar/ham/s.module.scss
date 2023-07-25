@@ -1,0 +1,72 @@
+
+%menu {
+    background-color: var(--color-orange-0);
+    color: var(--color-black-0);
+}
+
+.hamburger {
+    width: 20px;
+    height: 20px;
+
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url('~/public/assets/shared/tablet/icon-hamburger.svg');
+    z-index: 3;
+
+    & nav {
+        @extend %menu;
+        position: absolute;
+        z-index: 2;
+        width: 150px;
+        top: 45px;
+        left: -5px;
+    
+        & ul {
+            user-select: none;
+        }
+    
+        & li {
+            font-size: 12px;
+            padding: 10px;
+            text-transform: uppercase;
+            transition: background-color .3s ease-in-out, font-size .4s ease-in-out;
+    
+            &:hover {
+                font-size: 14px;
+                color: var(--color-orange-1);
+            }
+        }
+    }
+
+    .hamburgerMenu {
+        transition: opacity .3s ease-in-out;
+    }
+
+    .hamburgerIsOpen {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .hamburgerClosed {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .pointer {
+        @extend %menu;
+        position: absolute;
+        z-index: 1;
+        top: 37px;
+        left: 8px;
+        rotate: 45deg;
+        width: 17px;
+        height: 17px;
+    }
+}
+
+
+
+
+

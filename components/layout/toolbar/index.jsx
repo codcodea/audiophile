@@ -3,12 +3,12 @@ import Navigation from './nav'
 import Hamburger from './ham';
 import CartModal from './cart';
 import Link from 'next/link';
-import s from './s.module.css'
+import s from './s.module.scss'
 
 const Toolbar = () => {
     return (
         <header className={s.header}>
-            <section className={s.section}>
+            <section>
                 <div className={s.hamburger}>
                     <Hamburger />
                 </div>

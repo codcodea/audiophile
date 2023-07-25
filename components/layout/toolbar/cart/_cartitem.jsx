@@ -3,7 +3,7 @@
 
 import Image from 'next/image';
 
-import s from './s.module.css';
+import s from './s.module.scss';
 import db from '/lib/db';
 import toUSD from '/lib/toUSD';
 import useStore from '/lib/store';

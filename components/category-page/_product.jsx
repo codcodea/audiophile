@@ -1,7 +1,7 @@
 
 import { ProductCard, Ingress, Headline, Body, Button, StatefulButtons } from 'components'
 import toUSD from '/lib/toUSD';
-import s from './s.module.css';
+import s from './s.module.scss';
 
 const ProductItem = ({ data }) => {
 

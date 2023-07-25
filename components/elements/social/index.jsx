@@ -1,14 +1,14 @@
 
-import s from './s.module.css';
+import s from './s.module.scss';
 
 import { Facebook, Twitter, Instagram } from './_icons';
 
 const Social = ({ width }) => {
     return (
         <div className={s.social}>
-            <Facebook className={s.svg} width={width} />
-            <Twitter className={s.svg} width={width} />
-            <Instagram className={s.svg} width={width} />
+            <Facebook width={width} />
+            <Twitter width={width} />
+            <Instagram width={width} />
         </div>
     );
 }

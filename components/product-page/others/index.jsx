@@ -1,5 +1,5 @@
 
-import s from './s.module.css';
+import s from './s.module.scss';
 import Button from 'components/elements/button';
 import Image from 'next/image';
 

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Button } from 'components';
-import s from './s.module.css'
+import s from './s.module.scss'
 
 const Category = ({ img, text }) => {
     return (

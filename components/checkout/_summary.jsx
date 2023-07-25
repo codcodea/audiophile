@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useClickAway } from "@uidotdev/usehooks";
 import { Cart } from '..';
-import s from './s.module.css'
+import s from './s.module.scss'
 
 const Summary = () => {
     const router = useRouter();

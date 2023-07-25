@@ -1,6 +1,6 @@
 
 import { Separator } from 'components'
-import s from './s.module.css'
+import s from './s.module.scss'
 
 const TopBanner = ({ category }) => {
     
@@ -8,7 +8,7 @@ const TopBanner = ({ category }) => {
         <>
             <Separator />
             <div className={s.topbanner}>
-                <h4 className={s.h1override}> {category} </h4>
+                <h4> {category} </h4>
             </div>
         </>
     )

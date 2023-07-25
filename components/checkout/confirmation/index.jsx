@@ -8,7 +8,7 @@ import checkMark from 'public/assets/checkout/icon-order-confirmation.svg';
 
 import useStore from '/lib/store';
 import toUSD from '/lib/toUSD';
-import s from './s.module.css';
+import s from './s.module.scss';
 
 function Confirmation({ onClick }, ref) {
 
@@ -43,7 +43,7 @@ function Confirmation({ onClick }, ref) {
                                 )} */}
                         </div>
                         <div className={s.total}>
-                            <div className={s.inner}>
+                            <div>
                                 <h6> Grand Total </h6>
                                 <p> {toUSD(grandTotal)} </p>
                             </div>

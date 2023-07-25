@@ -1,8 +1,8 @@
 
 import speaker from 'public/assets/home/desktop/image-speaker-zx9.png';
 import Image from 'next/image';
-import s from './s.module.css';
-import { Ingress, Headline, Body, Button } from 'components';
+import s from './s.module.scss';
+import { Button } from 'components';
 
 const Banner_ZX9 = () => {
 
@@ -14,17 +14,19 @@ const Banner_ZX9 = () => {
             <div className={s.wrap}>
                 <div className={s.textWrapper}>
                     <div className={s.textGrid}>
-                        <Ingress color="white" />
-                        <div className={s.textGroup}>
-                            <Headline color="white">ZX9 </Headline>
-                            <Headline color="white">Speaker </Headline>
+                        <span className="overline" />
+                        <div>
+                            <h4>ZX9 </h4>
+                            <h4>Speaker </h4>
                         </div>
-                        <Body color="white">{body}</Body>
-                        <Button color="black" type="filled" slug={slug}> SEE PRODUCT </Button>
+                        <p>{body}</p>
+                        <Button color="black" type="filledDynamic" slug={slug}>
+                            <span className="button-font"> SEE PRODUCT </span>
+                        </Button>
                     </div>
                 </div>
-                <div className={s.imageGrid}>
-                    <Image className={s.image} src={speaker} alt="product_zx9" />
+                <div className={s.imageWrapper}>
+                    <Image src={speaker} alt="product_zx9" />
                 </div>
             </div>
         </section>

@@ -1,5 +1,5 @@
 import List from './_list';
-import s from './s.module.css';
+import s from './s.module.scss';
 
 const Features = ({ features, includes }) => {
 

@@ -1,6 +1,6 @@
 "use client"
 
-import s from './s.module.css'
+import s from './s.module.scss'
 import { Button } from 'components'
 
 const GoBack = () => {

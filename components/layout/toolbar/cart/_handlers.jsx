@@ -1,5 +1,5 @@
 
-import s from "./s.module.css";
+import s from "./s.module.scss";
 
 // Sticky toolbar and no overscroll
 const stickyToolbar = (open) => {

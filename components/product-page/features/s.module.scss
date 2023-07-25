@@ -1,0 +1,117 @@
+.section {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto auto;
+    gap: 10%;
+    min-height: fit-content;
+
+    .featHead {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    .featText {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    .boxHead {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    
+    .boxText {
+        grid-column: 2;
+        grid-row: 2;
+    }
+}
+
+.boxGrid {
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+
+    .quantity {
+        grid-column: 1;
+        display: inline;
+        color: var(--color-orange-1);
+    }
+
+    .itemName {
+        grid-column: 2;
+        display: inline;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .section {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 60px auto 60px auto;
+        row-gap: 20px;
+        min-height: max-content;
+
+        .featHead {
+            grid-column: 1;
+            grid-row: 1;
+            width: 100%;
+        }
+    
+        .featText {
+            grid-column: 1;
+            grid-row: 2;
+            width: 100%;
+        }
+    
+        .boxHead {
+            grid-column: 1;
+            grid-row: 3;
+        }
+    
+        .boxText {
+            grid-column: 1;
+            grid-row: 4;
+        }
+    }
+
+    .boxGrid {
+        .itemName {
+            grid-column: 2;
+            display: inline;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .section {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        grid-template-rows: auto auto auto;
+        row-gap: 8%;
+
+        .featHead {
+            grid-column: 1 / 3;
+            grid-row: 1;
+            width: 100%;
+        }
+    
+        .featText {
+            grid-column: 1 / 3;
+            grid-row: 2;
+            width: 100%;
+            /* border: 1px solid saddlebrown; */
+        }
+    
+        .boxHead {
+            grid-column: 1;
+            grid-row: 3;
+        }
+    
+        .boxText {
+            grid-column: 2;
+            grid-row: 3;
+            /* border: 1px solid saddlebrown; */
+            margin-top: 1vh;
+        }
+    }
+}

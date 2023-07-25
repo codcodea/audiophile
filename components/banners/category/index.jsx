@@ -1,5 +1,5 @@
 import Category from './_category';
-import s from './s.module.css';
+import s from './s.module.scss';
 
 import headphone from '@/assets/all/category/image-category-thumbnail-headphones.png';
 import speaker from '@/assets/all/category/image-category-thumbnail-speakers.png';
