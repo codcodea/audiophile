@@ -1,0 +1,27 @@
+.cartIcon {
+    width: 20%;
+    height: 20%;
+    background-image: url('~/public/assets/shared/desktop/icon-cart.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+
+    .cartCount {
+        width: 18px;
+        height: 18px;
+        position: relative;
+        left: 53%;
+        top: -12px;
+        border-radius: 100%;
+        padding: 3px;
+        background-color: var(--color-orange-1);
+        font-size: 12px;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--color-white-1);
+        user-select: none;
+    }
+    
+}

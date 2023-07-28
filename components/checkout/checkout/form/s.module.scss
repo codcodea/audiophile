@@ -1,0 +1,129 @@
+.textWrapper {
+    width: 100%;
+
+    & input {
+        width: 100%;
+        display: flex;
+        margin-bottom: 2em;
+        padding: 1.5em;
+
+        // outline: 1px solid #cccccc;
+        outline: none;
+        color: var(--checkout-gray);
+        border: 1px solid #cccccc;
+        
+        border-radius: 6px;
+        font-size: 0.8em;
+
+        &:hover {
+            border: 1px solid var(--color-orange-1);
+        }
+
+        &:focus {
+            border: 1px solid var(--color-orange-1);
+        }
+
+        &:valid {
+            background-color: transparent;
+        }
+
+        &:invalid {
+            border: 1px solid rgb(255, 13, 0);
+            background-color: transparent;
+        }
+        &:invalid+.err {
+            color: rgb(208, 17, 6);
+            display: block;
+        }
+
+        &:autofill {
+            background-color: transparent;
+        }
+    }
+
+    .err {
+        display: none;
+        position: relative;
+        font-size: 0.7em;
+        font-weight: 700;
+        top: -100px;
+        width: 100%;
+        height: 0;
+        text-align: right;
+        background-color: transparent;
+    }
+
+    .radio {
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+    
+        display: flex;
+        justify-content: left;
+        color: rgb(173, 173, 173);
+        padding: 10px;
+        cursor: pointer;
+        user-select: none;
+    
+        outline: 1px solid #cccccc;
+        accent-color: var(--color-orange-1);        
+    }
+}
+
+.radioWrapper {
+    width: 100%;
+    margin-bottom: 2em;
+    padding: 1.1em 1em;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    &:hover {
+        border: 1px solid var(--color-orange-1);
+    }
+
+    &:focus {
+        border: 1px solid var(--color-orange-1);
+    }
+
+    & input {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        accent-color: var(--color-orange-1);
+    }
+
+    outline: none;
+    color: var(--checkout-gray);
+    border: 1px solid #cccccc;
+
+    border-radius: 6px;
+
+    .radioLabel {
+        width: none;
+        display: inline-flex;
+        align-items: end;
+        margin-left: 1em;
+        height: 100%;
+    }
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 50px auto;
+    column-gap: 1em;
+    font-size: 12px;
+    line-height: 1.5;
+
+    & p {
+        color: var(--checkout-gray)
+    }
+}
+
+// @media (max-width: 767px) {
+//     .radioWrapper:nth-child(2) {
+        
+//     }
+// }
+

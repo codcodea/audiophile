@@ -2,5 +2,12 @@
 import { ProductPage } from 'components';
 
 export default function Products({ params }) {
-    return <ProductPage params={params} />
+    return (
+        <>
+            <main className="fadeIn">
+                <ProductPage params={params} />
+            </main>
+        </>
+
+    )
 };

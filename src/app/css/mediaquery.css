@@ -3,6 +3,7 @@ main {
     margin: 0 auto;
     background-color: var(--color-site-background);
     max-width: var(--site-max-width);
+   
 }
 
 section {
@@ -12,11 +13,11 @@ section {
 
 header {
     margin: 0 auto;
-    max-width: var(--site-max-width);
+    /* max-width: var(--site-max-width); */
 }
 
 footer {
-    max-width: var(--site-max-width);
+    /* max-width: var(--site-max-width); */
     margin: 0 auto;
 }
 
@@ -36,5 +37,19 @@ footer {
 @media (min-width: 1024px) {
     section {
         width: 90%;
+    }
+}
+
+.fadeIn {
+    animation: fadeIn 1.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }

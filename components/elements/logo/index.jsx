@@ -1,11 +1,17 @@
+
+"use client"
+
 import Image from 'next/image';
 import logo from '@/assets/shared/desktop/logo.svg'
-import s from './s.module.scss'
+import './s.scss'
 
 const Logo = ({ width }) => {
+
+    const styles = ["logo", "pulse"].join(" ");
+
     return (
-        <div className={s.logoWrapper}>
-            <Image className={s.logo} src={logo} alt="logo" width={width} />;
+        <div className={"logoWrapper"}>
+            <Image className={styles} src={logo} alt="logo" width={width} />;
         </div>
     )
 };

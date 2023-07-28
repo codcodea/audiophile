@@ -1,20 +1,43 @@
 "use client"
 
-import useStore from 'lib/store';
-import { useState } from 'react';
 import { ButtonCounter, Button } from 'components'
+import { useEffect, useState } from 'react';
+import useStore from '/lib/store';
 
-const StatefulButtons = ({ slug, label, id, price }) => {
-    const [count, setCount] = useState(0);
-    const upsert = useStore(state => state.upsert);
-    const handleclick = () => upsert({ id, count, price });
+import s from './s.module.scss';
+
+const StatefulButtons = ({ id, directUpdate = false }) => {
+
+    const tempCount = useStore(state => state.getCartId(id)?.tempCount || 0);
+    const count = useStore(state => state.getCartId(id)?.count || 0);
+    const setCartId = useStore(state => state.setCartId);
+    const setCommitCount = useStore(state => state.setCommitCount);
+ 
+   
+    const h = (e) => {
+
+        if(e.target.innerHTML === "Add to cart") return setCommitCount(id);
+    
+        if(directUpdate) {
+            if (e.target.className === s.minus) count > 0 && setCartId(id, count - 1);
+            else setCartId(id, count + 1);
+            setCommitCount(id);
+        } else {
+            if (e.target.className === s.minus) tempCount > 0 && setCartId(id, tempCount - 1);
+            else setCartId(id, tempCount + 1);
+        }
+    }
+
+    const props = { id, count: directUpdate ? count : tempCount, h };
 
     return (
         <>
-            <ButtonCounter count={count} setCount={setCount} />
-            <Button onClick={handleclick} type="filled" color="orange" slug={slug}>
-                <span className="button-font">{label}</span>
-            </Button>
+            <ButtonCounter {...props} />
+            {!directUpdate &&
+                <Button onClick={h} type="filled" color="orange">
+                    <span className="button-font">{"Add to cart"}</span>
+                </Button>
+            }
         </>
     )
 }

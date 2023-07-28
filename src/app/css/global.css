@@ -1,4 +1,3 @@
-
 @import url("./typography.css");
 @import url("./mediaquery.css");
 @import url("./normalize.css");
@@ -24,13 +23,13 @@
     --hero-gray: #4e4e4e;
     --paragraph-gray: #909090;
     --site-max-width: 1580px;
-    --checkout-gray:  #919191;
+    --checkout-gray: #919191;
     --checkout-bg: #eaeaea;
 }
 
 
 body {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 }
 
 a {
@@ -38,6 +37,26 @@ a {
     text-decoration: none;
 }
 
+.pulse {
+    animation: pulseAnimation 1s linear 1;
+}
 
+.pulse.restart {
+    animation: none; 
+  }
 
-
+@keyframes pulseAnimation {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.02);
+    }
+    50% {
+        transform: scale(0.98);
+    }
+    75% {
+        transform: scale(1.06);
+    }
+}

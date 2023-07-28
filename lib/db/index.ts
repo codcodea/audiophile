@@ -55,7 +55,7 @@ class DB {
 
     getCartProduct(id: number): CartProduct {
         const product: Record = this.db.find(item => item.id === id);
-        
+
         const wordsToRemove = ["headphones", "speaker", "earphones", "wireless"];
         const regexPattern = new RegExp(`\\b(${wordsToRemove.join('|')})\\b`, 'gi');
 

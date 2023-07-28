@@ -1,14 +1,18 @@
 
-import { ProductFactory, CategoryBanner, Prefooter } from "components";
+import { TopBanner, ProductFactory, CategoryBanner, Prefooter } from "components";
 
-export default function CategoryPage({params}) {
+export default function CategoryPage({ params }) {
     const { category } = params;
 
     return (
         <>
-            <ProductFactory category={category} />
-            <CategoryBanner />
-            <Prefooter />
+            <TopBanner category={category} />
+            <main className="fadeIn">
+                <ProductFactory category={category} />
+                <CategoryBanner />
+                <Prefooter />
+            </main>
         </>
+
     )
 }

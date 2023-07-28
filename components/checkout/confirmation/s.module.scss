@@ -1,7 +1,7 @@
 .wrap {
     position: absolute;
     width: 540px;
-    max-height: 581px;
+    height: fit-content;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -26,10 +26,9 @@
     }
 }
 
-
 .summary {
     width: 100%;
-    height: 140px;
+    height: max-content;
     background-color: rgb(201, 201, 201);
     border-radius: 10px;
     margin-bottom: 40px;
@@ -42,8 +41,40 @@
         position: relative;
         grid-row: 1;
         grid-column: 1;
-        height: 70px;
         width: 100%;
+        min-height: 98px;
+        max-height: 300px;
+        height: fit-content;
+        overflow-y: scroll;
+        margin: 0.5em;
+      
+        & div {
+            width: 90%;
+            justify-self: center;
+            column-gap: 0em;
+            row-gap: 1em;
+            height: 64px;
+        }
+
+        .view {
+            width: 90%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 1em auto;
+            & hr {
+                margin-top: 1em;
+                width: 95%;
+                border-top: 1px solid #a8a8a8;
+            }
+
+            & p {
+                padding: 0;
+                margin: 1em 0;
+            }
+        }
     }
 
     .total {
@@ -88,4 +119,6 @@
 
 .button {
     width: 100%;
+    height: 50px;
 }
+

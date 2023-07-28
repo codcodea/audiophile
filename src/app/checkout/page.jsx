@@ -1,6 +1,11 @@
+"use client"
 
 import { Checkout } from 'components';
 
 export default function CheckoutPage() {
-    return <Checkout />;
+    return (
+        <main className="fadeIn">
+            <Checkout />
+        </main>
+    )
 }

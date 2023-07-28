@@ -43,7 +43,7 @@
         "**/*.tsx",
         "**/*.json",
         "components/elements/button/counter.jsx",
-        "components/product-page/index.jsx",
+        "components/pages/product/index.jsx",
         "lib/db/texts.js"
     ],
     "exclude": [
