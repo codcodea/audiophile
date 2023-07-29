@@ -1,6 +1,6 @@
 .cartIcon {
-    width: 20%;
-    height: 20%;
+    width: 22px;
+    height: 22px;
     background-image: url('~/public/assets/shared/desktop/icon-cart.svg');
     background-repeat: no-repeat;
     background-size: contain;
@@ -17,6 +17,7 @@
         background-color: var(--color-orange-1);
         font-size: 12px;
         font-weight: 700;
+        
         display: flex;
         justify-content: center;
         align-items: center;

@@ -1,17 +1,17 @@
-
-import speaker from 'public/assets/home/desktop/image-speaker-zx9.png';
 import Image from 'next/image';
-import s from './s.module.scss';
 import { Button } from 'components';
+import s from './s.module.scss';
+import speaker from 'public/assets/home/desktop/image-speaker-zx9.png';
+
+
 
 const Banner_ZX9 = () => {
-
     const slug = "/speakers/zx9-speaker";
     const body = "Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.";
 
     return (
-        <section>
-            <div className={s.wrap}>
+        <section className={s.section}>
+            <article>
                 <div className={s.textWrapper}>
                     <div className={s.textGrid}>
                         <span className="overline" />
@@ -28,7 +28,7 @@ const Banner_ZX9 = () => {
                 <div className={s.imageWrapper}>
                     <Image src={speaker} alt="product_zx9" />
                 </div>
-            </div>
+            </article>
         </section>
     )
 }

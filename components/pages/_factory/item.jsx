@@ -17,7 +17,7 @@ const ProductItem = ({ data }) => {
     return (
         <ProductCard isLeft={isLeft} src={image} alignCenter={isCategory}>
             {isNew && <span className="overline"> New Product </span>}
-            <h1>{name}</h1>
+            <h4>{name}</h4>
             <p> {description} </p>
             <h6> {localPrice} </h6>
             <div className={styles}>

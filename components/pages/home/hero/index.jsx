@@ -11,9 +11,9 @@ const HeroBanner = () => {
 
     return (
         <div className={s.wrap}>
-            <Separator />
-            <section className={s.section}>
-                <article className={s.grid}>
+            <Separator/>
+            <section >
+                <article>
                     <div className={s.textWrap}>
                         <div className={s.text}>
                             <div className={s.ingress}>

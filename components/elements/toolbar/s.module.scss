@@ -10,7 +10,7 @@
 
     & section {
         display: grid;
-        grid-template-columns: 2fr 5fr 2fr;
+        grid-template-columns: 2fr auto 2fr;
         height: 85px;
         background-color: var(--color-black-1);
         margin: 0 auto;
@@ -81,7 +81,8 @@
     .header {
         & section {
             display: grid;
-            grid-template-columns: 110px auto 110px;
+            grid-template-columns: 80px auto 80px;
+            gap: 0;
         }
     }
 
@@ -106,6 +107,7 @@
         display: flex;
         justify-content: left;
         grid-column: 1;
+     
     }
 
     .cart {
@@ -114,6 +116,9 @@
 
     .logo {
         grid-column: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .grid2Content {

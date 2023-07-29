@@ -1,4 +1,4 @@
-import Category from './_category';
+import Category from './category';
 import s from './s.module.scss';
 
 import headphone from '@/assets/all/category/image-category-thumbnail-headphones.png';

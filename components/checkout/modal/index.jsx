@@ -8,9 +8,9 @@ import stickyToolbar from './sticky';
 const CartModal = ({ isOpen, children }) => {
 
     useEffect(() => {
-        stickyToolbar(true)
+        stickyToolbar(isOpen)
         return () => stickyToolbar(false)
-    }, [])
+    }, [isOpen])
 
     if (!isOpen) return;
 

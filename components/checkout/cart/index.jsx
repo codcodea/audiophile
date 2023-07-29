@@ -1,14 +1,14 @@
 "use client"
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import CartIcon from './parts/icon';
 import Cart from './parts/cart';
 import CartModal from '../modal'
 import s from './s.module.scss';
 import { useClickAway } from "@uidotdev/usehooks";
 
-
 const CartComponent = () => {
+
     const [isOpen, setOpen] = useState(false);
     const handleOpen = () => setOpen(prev => !prev);
 

@@ -8,6 +8,5 @@ export default function Products({ params }) {
                 <ProductPage params={params} />
             </main>
         </>
-
     )
 };

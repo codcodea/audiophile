@@ -1,9 +1,7 @@
-
-import { Button, Subhead } from 'components';
+import { Button } from 'components';
 import s from './s.module.scss'
 
 const Banner_YX1 = () => {
-
     const slug = "earphones/yx1-earphones";
 
     return (

@@ -1,8 +1,6 @@
-
 import s from './s.module.scss';
 import Button from 'components/elements/button';
 import Image from 'next/image';
-
 import db from 'lib/db';
 
 const Other = ({ slug, text, image }) => {
@@ -12,7 +10,7 @@ const Other = ({ slug, text, image }) => {
                 <Image className={s.image} fill sizes="50%" src={"/" + image} alt="others_label" />
             </div>
             <h5 className={s.header}>{text}</h5>
-            <div className={s.buttonWrapper}>
+            <div className={s.button}>
                 <Button slug={slug} type="filled" color="orange">
                     <span className="button-font">See Product</span>
                 </Button>
@@ -27,7 +25,7 @@ const Others = async ({ others }) => {
         <section className={s.section}>
 
             <div className={s.headWrapper}>
-                <h1 className={s.header}> You may also like </h1>
+                <h4 className={s.header}> You may also like </h4>
             </div>
 
             <div className={s.otherWrapper}>

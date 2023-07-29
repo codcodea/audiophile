@@ -6,6 +6,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    text-rendering: optimizeLegibility;
 }
 
 :root {
@@ -27,7 +28,6 @@
     --checkout-bg: #eaeaea;
 }
 
-
 body {
     background-color: rgb(255, 255, 255);
 }
@@ -37,26 +37,8 @@ a {
     text-decoration: none;
 }
 
-.pulse {
-    animation: pulseAnimation 1s linear 1;
-}
-
-.pulse.restart {
-    animation: none; 
-  }
-
-@keyframes pulseAnimation {
-    0%,
-    100% {
-        transform: scale(1);
-    }
-    25% {
-        transform: scale(1.02);
-    }
-    50% {
-        transform: scale(0.98);
-    }
-    75% {
-        transform: scale(1.06);
-    }
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

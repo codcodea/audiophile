@@ -1,9 +1,9 @@
 "use client"
 
-import s from '../s.module.scss';
 import { useState } from 'react';
-import { TextField, Radio, CheckoutFooter } from '../../..';
-import p from './placeholder'
+import { CheckoutFooter, Radio, TextField } from '../../..';
+import s from '../s.module.scss';
+import p from './placeholder';
 
 const Form = () => {
 

@@ -3,7 +3,6 @@ import { Separator } from 'components'
 import s from './s.module.scss'
 
 const TopBanner = ({ category }) => {
-    
     return (
         <>
             <Separator />

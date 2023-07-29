@@ -2,11 +2,11 @@
 
 import Confirmation from '../../confirmation';
 import useStore from 'lib/store';
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
 import { useClickAway } from "@uidotdev/usehooks";
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 import { Cart } from '../../..';
-import s from '../s.module.scss'
+import s from '../s.module.scss';
 
 const Summary = () => {
     const router = useRouter();
@@ -17,7 +17,7 @@ const Summary = () => {
     const ref = useClickAway(() => setOpen(false));
     const handleOpen = () => setOpen(state => !state);
 
-    const handleCommit = (e) => {
+    const handleCommit = () => {
         reset();
         setOpen(state => !state);
         router.push('/');

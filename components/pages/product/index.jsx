@@ -1,4 +1,3 @@
-
 import Features from './features'
 import Gallery from './gallery'
 import Others from './others'
@@ -7,10 +6,8 @@ import { Prefooter, CategoryBanner, ProductFactory, GoBack } from 'components'
 import db from 'lib/db'
 
 const ProductPage = async ({ params }) => {
-
     const { category, product } = params;   
-
-    const { id, features, includes, gallery, others } = db.getProductPage(product);
+    const { features, includes, gallery, others } = db.getProductPage(product);
 
     return (
         <>

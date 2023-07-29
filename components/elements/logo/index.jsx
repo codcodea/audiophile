@@ -3,7 +3,7 @@
 
 import Image from 'next/image';
 import logo from '@/assets/shared/desktop/logo.svg'
-import './s.scss'
+import './logo.css'
 
 const Logo = ({ width }) => {
 

@@ -3,11 +3,11 @@
     aspect-ratio: 16/9;
     background-color: var(--color-black-1);
 
-    .section {
+    section {
         margin: 0 auto;
     }
 
-    .grid {
+    article {
         display: grid;
         height: 100%;
         aspect-ratio: 16/9;
@@ -29,38 +29,41 @@
         aspect-ratio: 1/1;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 16% auto 30% auto;
+        grid-template-rows: 1fr 2fr 3fr 2fr;
+        row-gap: 1em;
         align-items: flex-start;
         justify-content: start;
-    }
 
-    .ingress {
-        grid-template-rows: 1;
+        .ingress {
+            grid-row: 1;
+            margin-bottom: 0.3em;
 
-        :global(.overline) {
-            color: var(--hero-gray);
+            :global(.overline) {
+                color: var(--hero-gray);
+            }
         }
-    }
 
-    .head {
-        grid-template-rows: 2;
+        .head {
+            grid-row: 2;
 
-        & h1 {
-            color: white;
-            font-size: 44px;
+            & h1 {
+                color: white;
+                width: 100%;
+                line-height: 0.66;
+                letter-spacing: 2px;
+            }
+        }
+
+        .body {
+            grid-row: 3;
+        }
+
+        .button {
+            grid-row: 4;
             width: 100%;
-            line-height: 0.66;
-            letter-spacing: 2px;
+            margin-top: 0.5em;
+           
         }
-    }
-
-    .body {
-        grid-template-rows: 3;
-    }
-
-    .button {
-        grid-template-rows: 4;
-        width: 100%;
     }
 }
 
@@ -80,11 +83,14 @@
     }
 }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
     .wrap {
+        width: 100%;
         aspect-ratio: 3/4;
+        overflow-x: hidden;
 
-        .grid {
+        article {
+            width: 100%;
             aspect-ratio: 3/4;
             grid-template-columns: 1fr;
             grid-template-rows: 1fr;
@@ -99,31 +105,32 @@
         align-items: center;
 
         .text {
+            width: minmax(250px, 50vw);
+            aspect-ratio: 1/1;
             text-align: center;
-        }
-
-        .ingress {
-            grid-template-rows: 1;
-
-            :global(.overline) {
-                font-size: 16px;
-                color: var(--hero-gray);
+            .ingress {
+                grid-row: 1;
+                :global(.overline) {
+                    font-size: 16px;
+                    line-height: 1.3;
+                    color: var(--hero-gray);
+                }
             }
-        }
 
-        .head {
-            grid-template-rows: 2;
-
-            & h1 {
-                font-size: 38px;
+            .head {
+                grid-row: 2;
             }
-        }
 
-        .button {
-            grid-column: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            .body {
+                grid-row: 3;
+            }
+
+            .button {
+                grid-column: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
         }
     }
 
@@ -131,27 +138,29 @@
         grid-column: 1;
         position: absolute;
         width: 100%;
-        aspect-ratio: 1/1;
-        top: 15%;
+        aspect-ratio: 3/4;
+        top: 8%;
+        left: 0;
+
         overflow: hidden;
 
         & img {
             position: absolute;
             width: 100%;
-            height: 100%;
+            aspect-ratio: 3/4;
+            left: 1%;
             object-fit: cover;
         }
     }
-
-
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     .wrap {
         aspect-ratio: 1/1;
 
-        .grid {
+        article {
             display: grid;
+
             aspect-ratio: 1/1;
             position: relative;
             grid-template-columns: 1fr;
@@ -174,27 +183,27 @@
             text-align: center;
             gap: 0.8em;
             width: 60%;
-        }
 
-        .head {
-            grid-template-rows: 2;
+            .head {
+                grid-row: 2;
 
-            & h1 {
-                font-size: 56px;
-                line-height: 0.6;
+                & h1 {
+                    font-size: 56px;
+                    line-height: 0.6;
+                }
             }
-        }
 
-        .body {
-            width: 80%;
-        }
+            .body {
+                width: 80%;
+            }
 
-        .button {
-            grid-column: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 2em;
+            .button {
+                grid-column: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 2em;
+            }
         }
     }
 

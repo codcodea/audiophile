@@ -1,42 +1,12 @@
 .topbanner {
+    composes: flex from global;
     height: 10vh;
-
     margin: 0 auto;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
     background-color: var(--color-black-1);
     color: white;
 
     & h4 {
         margin: 0;
-    }
-}
-
-.textAlignCenter {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 5%;
-}
-
-.textAlignLeft {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 5%;
-}
-
-@media (min-width: 1024px) {
-    .textAlignCenter {
-        justify-content: flex-start;
-        align-items: center;
-        text-align: center;
     }
 }

@@ -1,51 +1,36 @@
-.flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.section {
-    margin: 5vh auto;
-    /* border: 1px solid red; */
-}
 
 .wrap {
+    height: fit-content;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 0;
-    height: fit-content;
-    /* border: 3px solid rgb(19, 191, 7); */
 }
 
 .textWrapper {
+    composes: flex from global;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* border: 3px solid rgb(19, 191, 7); */
-
+    
     order: 2;
 
-    .text.textAlignCenter {
+    .text.textAlignCenter{
         display: flex;
         flex-direction: column;
-        text-align: center;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
+        text-align: center;
         gap: 1em;
-        /* border: 2px solid rgb(17, 0, 255); */
     }
 
     .text.textAlignLeft {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        text-align: left;
+        align-items: flex-start;
         justify-content: flex-start;
+        text-align: left;
         gap: 1em;
-        /* border: 2px solid rgb(255, 0, 140); */
+        // border: 2px solid rgb(0, 13, 255);
     }
 }
 
@@ -54,12 +39,12 @@
 }
 
 .imageWrapper {
-    order: 1;
-    overflow: hidden;
     width: 100%;
     aspect-ratio: 1/1;
+    order: 1;
     position: relative;
     border-radius: 2%;
+    overflow: hidden;
    
     .image {
         position: absolute;
@@ -74,18 +59,16 @@
     }
 }
 
-
-
 .imageWrapper.reverse {
     order: 2;
 }
 
 @media (max-width: 767px) {
     .wrap {
+        width: 100%;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
-        width: 100%;
         row-gap: 10%;
     }
 
@@ -114,16 +97,16 @@
         grid-template-rows: 370px auto;
         width: 100%;
         height: fit-content;
-
     }
 
     .imageWrapper {
-        order: 1;
-        overflow: hidden;
         width: 100%;
         height: 100%;
         aspect-ratio: none;
+
+        order: 1;
         position: relative;
+        overflow: hidden;
 
         .image {
             position: absolute;

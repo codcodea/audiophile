@@ -1,11 +1,11 @@
 
 // exports all components from this folder for easy access elsewhere
 
+import Cart from "./checkout/cart/parts/cart";
+import CartItem from "./checkout/cart/parts/item";
 import Footer from "./elements/footer";
 import Toolbar from "./elements/toolbar";
 import Navigation from "./elements/toolbar/nav";
-import Cart from "./checkout/cart/parts/cart";
-import CartItem from "./checkout/cart/parts/item";
 
 import Button from "./elements/button";
 import ButtonCounter from "./elements/button/counter";
@@ -13,10 +13,10 @@ import StatefulButtons from "./elements/button/stateful";
 import Logo from "./elements/logo";
 import Separator from "./elements/separator";
 import Social from "./elements/social";
-import ProductCard from "./pages/category/card";
+import ProductCard from "./pages/_factory/card";
 import GoBack from "./pages/product/goback";
 
-import ProductFactory from "./pages/category";
+import ProductFactory from "./pages/_factory";
 import ProductPage from "./pages/product";
 
 import Prefooter from "./elements/prefooter";
@@ -26,14 +26,14 @@ import Banner_ZX9 from "./pages/home/ZX9";
 import CategoryBanner from "./pages/home/categories";
 import HeroBanner from "./pages/home/hero";
 
+import Checkout from "./checkout/checkout";
 import CheckoutFooter from "./checkout/checkout/form/footer";
 import Radio from "./checkout/checkout/form/radio";
 import TextField from "./checkout/checkout/form/textfield";
-import Checkout from "./checkout/checkout";
 import Confirmation from "./checkout/confirmation";
 import CartModal from "./checkout/modal";
 
-import TopBanner from "./pages/category/_topbanner";
+import TopBanner from "./pages/category/topbanner";
 
 export {
     Banner_YX1,
@@ -42,18 +42,18 @@ export {
     Button,
     ButtonCounter,
     Cart,
-    CartItem, CategoryBanner,
+    CartItem, CartModal, CategoryBanner,
     Checkout,
     CheckoutFooter,
     Confirmation,
     Footer,
     GoBack,
     HeroBanner as Hero,
-    Logo,
-    CartModal as Modal,
-    Navigation,
+    Logo, Navigation,
     Prefooter,
-    ProductCard, ProductFactory, ProductPage,
+    ProductCard,
+    ProductFactory,
+    ProductPage,
     Radio,
     Separator,
     Social,

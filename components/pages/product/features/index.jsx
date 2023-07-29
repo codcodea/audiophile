@@ -1,4 +1,4 @@
-import List from './_list';
+import List from './inthebox';
 import s from './s.module.scss';
 
 const Features = ({ features, includes }) => {

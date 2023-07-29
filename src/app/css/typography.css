@@ -1,20 +1,14 @@
-html {
-    font-family: manrope, sans-serif;
-    text-rendering: optimizeLegibility;
-}
 
 h1 {
-    font-weight: 600;
+    margin-bottom: 0.4em;
+    font-size: 28px;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
     line-height: 1.3;
-    margin-bottom: 0.4em;
-    font-size: 28px;
-    word-wrap: break-word;
 }
 
 h2 {
-    font-family: "Manrope Bold", sans-serif;
     font-size: 40px;
     text-transform: uppercase;
     line-height: 44px;
@@ -23,7 +17,6 @@ h2 {
 }
 
 h3 {
-    font-family: "Manrope Bold", sans-serif;
     font-size: 32px;
     text-transform: uppercase;
     line-height: 36px;
@@ -32,7 +25,6 @@ h3 {
 }
 
 h4 {
-    font-family: "Manrope Bold", sans-serif;
     font-size: 28px;
     text-transform: uppercase;
     line-height: 38px;
@@ -41,7 +33,6 @@ h4 {
 }
 
 h5 {
-    font-family: "Manrope", sans-serif;
     font-size: 24px;
     font-weight: 600;
     text-transform: uppercase;
@@ -51,7 +42,7 @@ h5 {
 }
 
 h6 {
-    font-family: "Manrope Bold", sans-serif;
+   
     font-size: 18px;
     text-transform: uppercase;
     letter-spacing: 1.3px;
@@ -59,19 +50,16 @@ h6 {
 }
 
 .overline {
-    font-family: "Manrope", sans-serif;
-    font-weight: 400;
+    width: 100%;
     font-size: 14px;
-    text-transform: uppercase;
+    font-weight: 400;
     line-height: 3em;
     letter-spacing: 6px;
+    text-transform: uppercase;
     color: var(--color-orange-1);
-    /* border: 1px solid var(--color-orange-1); */
-    width: 100%;
 }
 
 .subtitle {
-    font-family: "Manrope Bold", sans-serif;
     font-size: 13px;
     text-transform: uppercase;
     line-height: 25px;
@@ -82,9 +70,8 @@ h6 {
 }
 
 p {
-    font-family: "Manrope", sans-serif;
-    font-weight: 500;
     font-size: 15px;
+    font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0em;
     color: var(--paragraph-gray);
@@ -93,18 +80,15 @@ p {
 }
 
 button {
-    font-family: "Manrope", sans-serif;
     text-transform: uppercase;
-    font-weight: 600;
 }
 
 .button-font {
-    font-family: "Manrope", sans-serif;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1.3px;
     font-size: 10px;
+    font-weight: 600;
     line-height: 0;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
     text-align: center;
     color: white;
 }
@@ -113,12 +97,9 @@ label {
     width: 100%;
     display: block;
     margin-bottom: 0.7em;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    font-family: "Manrope", sans-serif;
     font-size: 0.7em;
     font-weight: 700;
     color: black;
@@ -128,9 +109,8 @@ label {
 @media (max-width: 767px) {
 
     h1 {
-        font-size: clamp(28px, 6vw, 56px);
-        width: 66%;
-        /* border: 2px solid rosybrown; */
+        font-size: clamp(9vw, 30px, 20vw);
+        width: 100%;
     }
 
     h5 {
@@ -140,13 +120,24 @@ label {
     .overline {
         font-size: clamp(14px, 3vw, 24px);
     }
+
+    button {
+        width: 150px;
+        aspect-ratio: 30/9;
+        line-height: 0;
+        padding: 0;
+    }
+
+    .button-font {
+        font-size: 12px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
+
     h1 {
-        width: 70%;
-        font-size: 28px;
-        /* border: 2px solid rosybrown; */
+        font-size: clamp(6vw, 32px, 12vw);
+        width: 100%;
     }
 
     .overline {

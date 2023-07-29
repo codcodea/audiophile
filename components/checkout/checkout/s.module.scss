@@ -2,16 +2,15 @@
 .wrap {
     background-color: var(--checkout-bg);
 
-    & section {
+    section {
         width: 80%;
         margin: 0 auto;
         background-color: var(--checkout-bg);
     }
 
-    & article {
+    article {
         display: grid;
-        grid-template-columns: 66% 34%;
-        grid-template-rows: 1fr;
+        grid-template: 1fr / 66% 33%;
         column-gap: 2em;
         padding: 10vh 0;
     } 
@@ -25,18 +24,17 @@
     padding: 2em;
     background-color: white;
 
-    & label {
+    label {
         display: block;
     }
 
     .double {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
+        grid-template: auto / 1fr 1fr;
         column-gap: 1em;
     }
 
-    & h4 {
+    h4 {
         margin-bottom: 1em;
     }
 }
@@ -59,24 +57,21 @@
     
         .double {
             display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr;
-            gap: 0;
-
-           
+            grid-template: 1fr / 1 fr;
+            gap: 1em;
         }
     }
 }
 
 @media (max-width: 1023px) {
     .wrap {
-        & section {
+        section {
             padding: 5vh 0;
         }
-        & article {
+        
+        article {
             display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: auto auto;
+            grid-template: auto auto / 1fr;
             gap: 2em;
             max-width: 700px;
             margin: 0 auto;

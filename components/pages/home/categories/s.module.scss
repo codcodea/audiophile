@@ -1,12 +1,6 @@
-.flex {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center
-}
 
 .section {
-    composes: flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
@@ -14,25 +8,31 @@
 .wrap {
     position: relative;
     width: 30%;
+
+    .card {
+        width: 100%;
+        aspect-ratio: 3/2;
+        background-color: #f8f8f8;
+        border-radius: 2%;
+        padding-bottom: 5%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center
+    }
+    
+    .image {
+        width: 80%;
+        height: 80%;
+        position: absolute;
+        top: -30%;
+        left: 10%;
+        object-fit: contain;
+    }
 }
 
-.card {
-    composes: flex;
-    width: 100%;
-    aspect-ratio: 3/2;
-    background-color: #f8f8f8;
-    border-radius: 2%;
-    padding-bottom: 5%;
-}
 
-.image {
-    position: absolute;
-    top: -30%;
-    left: 10%;
-    width: 80%;
-    height: 80%;
-    object-fit: contain;
-}
 
 @media (max-width: 767px) {
     .section {
@@ -47,12 +47,12 @@
         justify-content: flex-end;
         align-items: flex-end;
         margin-top: 150px;
-    }
 
-    .card {
-        width: 100%;
-        aspect-ratio: 2/1;
-        border-radius: 2%;
+        .card {
+            width: 100%;
+            aspect-ratio: 2/1;
+            border-radius: 2%;
+        }
     }
 
     .innerWrap {
