@@ -6,3 +6,4 @@ https://www.frontendmentor.io/
 
 * Next.js 13.4 with server components
 * SCSS
+* TypeScript for data layer

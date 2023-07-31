@@ -25,6 +25,7 @@
         }
 
         .card {
+
             width: 80%;
             display: grid;
             grid-template: 25px auto auto max-content max-content / 1fr;
@@ -103,7 +104,9 @@
 
             align-items: flex-end;
             text-align: left;
+
             order: 2;
+
         
             .card {
                 gap: 1.5em;

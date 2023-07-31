@@ -26,6 +26,7 @@ type Others = {
 
 export type Record = {
     id: number;
+    img: string;
     slug: string;
     name: string;
     image: Image;
@@ -40,22 +41,12 @@ export type Record = {
     others: Others[];
 };
 
-export interface CategoryPage {
-    id: number;
-    name: string;
-    slug: string;
-    description: string;
-    isLeft: boolean;
-    isNew: boolean;
-    categoryImage: string;
-}
-
 export interface ProductPage {
     id: number;
     slug: string;
     name: string;
     category: string;
-    image: string; // tablet
+    image: string; 
     isNew: boolean;
     price: number;
     description: string;
@@ -64,6 +55,12 @@ export interface ProductPage {
     gallery: Gallery;
     others: Others[];
 }
+
+
+export interface CategoryPage extends ProductPage {
+   isLeft: boolean;
+}
+
 
 export interface CartProduct {
     id: number;

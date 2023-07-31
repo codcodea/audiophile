@@ -1,4 +1,3 @@
-
 import { TopBanner, ProductFactory, CategoryBanner, Prefooter } from "components";
 
 export default function CategoryPage({ params }) {
@@ -13,6 +12,5 @@ export default function CategoryPage({ params }) {
                 <Prefooter />
             </main>
         </>
-
     )
 }

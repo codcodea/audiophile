@@ -20,7 +20,7 @@ const Toolbar = () => {
                 <Navigation />
 
                 <div className={s.cart}>
-                    <CartComponent />
+                    <CartComponent/>
                 </div>
             </section>
         </header>

@@ -1,22 +1,18 @@
-import ProductItem from './item';
-import CategoryPage from '../category'
 import db from 'lib/db'
+import CategoryPage from '../category'
+import ProductCard from './card'
 
 const ProductFactory = async ({ category = null, product = null }) => {
     const isCategoryPage = !!category;
 
     if (isCategoryPage) { // list of product items
         const c = db.getCategoryPage(category);
-        return <CategoryPage category={category} data={c} />
+        return <CategoryPage data={c} />
         
     } else { // single product item
         const p = db.getProductPage(product);
-        const props = { isLeft: true, hasCounter: true, ...p }
-        return (
-            <section>
-                <ProductItem data={props} />
-            </section>
-        )
+        const props = { isLeft: true, ...p}
+        return <ProductCard isCategory={false} data={props} />
     }
 }
 

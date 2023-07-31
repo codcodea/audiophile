@@ -56,6 +56,11 @@
 
         .body {
             grid-row: 3;
+
+            p {
+                color: rgb(177, 177, 177);
+                line-height: 1.7;
+            }
         }
 
         .button {
@@ -86,12 +91,12 @@
 @media (max-width: 767px) {
     .wrap {
         width: 100%;
-        aspect-ratio: 3/4;
+        aspect-ratio: 1/1.4;
         overflow-x: hidden;
 
         article {
             width: 100%;
-            aspect-ratio: 3/4;
+            aspect-ratio: 1/1.4;
             grid-template-columns: 1fr;
             grid-template-rows: 1fr;
         }
@@ -104,10 +109,13 @@
         justify-content: center;
         align-items: center;
 
+       
+
         .text {
-            width: minmax(250px, 50vw);
+            width: min(80vw, 350px);
             aspect-ratio: 1/1;
             text-align: center;
+
             .ingress {
                 grid-row: 1;
                 :global(.overline) {
@@ -118,7 +126,7 @@
             }
 
             .head {
-                grid-row: 2;
+                grid-row: 2; 
             }
 
             .body {
@@ -138,8 +146,8 @@
         grid-column: 1;
         position: absolute;
         width: 100%;
-        aspect-ratio: 3/4;
-        top: 8%;
+        aspect-ratio: 5/7;
+        top: 6%;
         left: 0;
 
         overflow: hidden;
@@ -147,7 +155,7 @@
         & img {
             position: absolute;
             width: 100%;
-            aspect-ratio: 3/4;
+            aspect-ratio: 5/7;
             left: 1%;
             object-fit: cover;
         }

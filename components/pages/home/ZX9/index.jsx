@@ -11,22 +11,18 @@ const Banner_ZX9 = () => {
 
     return (
         <section className={s.section}>
+            <div className={s.circle}></div>
             <article>
                 <div className={s.textWrapper}>
-                    <div className={s.textGrid}>
-                        <span className="overline" />
-                        <div>
-                            <h4>ZX9 </h4>
-                            <h4>Speaker </h4>
-                        </div>
-                        <p>{body}</p>
-                        <Button color="black" type="filled" slug={slug}>
-                            <span className="button-font"> SEE PRODUCT </span>
-                        </Button>
-                    </div>
+                    <h1>ZX9 Speaker</h1>
+                    <p>{body}</p>
+                    <Button color="black" type="filled" alignCenter={false} slug={slug}>
+                        <span className="button-font"> SEE PRODUCT </span>
+                    </Button>
                 </div>
                 <div className={s.imageWrapper}>
-                    <Image src={speaker} alt="product_zx9" />
+                   
+                    <Image className={s.image} src={speaker} alt="product_zx9" />
                 </div>
             </article>
         </section>

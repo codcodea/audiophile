@@ -4,16 +4,16 @@
 import s from './s.module.scss';
 import { handleClickZoom } from './_functions';
 
-const ButtonCounter = ({ count, h }) => {
+const ButtonCounter = ({ count, handleClick }) => {
 
     const i = (e) => handleClickZoom(e);
 
-    const styles = [s["counter"], s["gray"], s.font].join(' ');
+    const styles = [s["counter"], s["gray"], "button-font"].join(' ');
 
     return <div onClick={i} className={styles}>
-        <span onClick={h} className={s.minus}> - </span>
+        <span onClick={handleClick} className={s.minus}> - </span>
         <span className={s.number}>{count}</span>
-        <span onClick={h} className={s.plus}> + </span>
+        <span onClick={handleClick} className={s.plus}> + </span>
     </div>
 }
 

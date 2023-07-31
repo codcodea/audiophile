@@ -1,4 +1,3 @@
-
 import _db from './data.json'
 import { Record, Database, CategoryPage, ProductPage, CartProduct } from './DB';
 
@@ -9,42 +8,44 @@ class DB {
         this.db = _db;
     }
 
-    getCategoryPage(category: string): CategoryPage[] {
-        const cat: Record[] = this.db.filter(item => item.category === category);
+    getSlugs(): string[] {
+        return this.db.map(item => item.slug);
+    }
 
-        return cat.map((item, index) => {
-            return {
-                id: item.id,
-                name: item.name,
-                description: item.description,
-                slug: item.slug,
-                isLeft: index % 2 === 0 ? true : false,
-                isNew: item.new,
-                categoryImage: "/" + item.categoryImage.tablet,
-            };
+    getCategoryPage(category: string): CategoryPage[] {
+
+        const cat: Record[] = this.db.filter(item => item.category === category);
+        const a =  cat.map((item, index) => {
+            const product = this.getProductPage(item.slug);
+            const isLeft =  index % 2 === 0 ? true : false;
+            return {...product, isLeft}
         });
+
+        if(!a?.length) {
+            throw new Error("Category not found");
+        }
+        return a;
     }
 
     getProductPage(productSlug: string): ProductPage {
-        const product: Record = this.db.find(item => item.slug === productSlug);
-
-        if (!product) {
-            return null;
+        const item: Record = this.db.find(item => item.slug === productSlug);
+        if (!item) {
+            throw new Error("Product not found");
         }
 
         return {
-            id: product.id,
-            slug: product.slug,
-            category: product.category,
-            name: product.name,
-            image: "/" + product.categoryImage.tablet,
-            isNew: product.new,
-            price: product.price,
-            description: product.description,
-            features: product.features,
-            includes: product.includes,
-            gallery: product.gallery,
-            others: product.others,
+            id: item.id,
+            name: item.name,
+            description: item.description,
+            slug: item.slug,
+            isNew: item.new,
+            image: "/" + item.img,
+            price: item.price,
+            features: item.features,
+            includes: item.includes,
+            gallery: item.gallery,
+            others: item.others,
+            category: item.category,
         };
     }
 

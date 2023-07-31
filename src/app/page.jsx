@@ -1,4 +1,3 @@
-
 import {
     Hero,
     CategoryBanner,
@@ -20,6 +19,5 @@ export default function Home() {
                 <Prefooter />
             </main>
         </>
-
     )
 }

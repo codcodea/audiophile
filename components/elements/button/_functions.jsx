@@ -16,3 +16,4 @@ export const handleClickZoom = (e) => {
     button.style.scale = "1.15";
     setTimeout(() => button.style.scale = "1", 100);
 }
+

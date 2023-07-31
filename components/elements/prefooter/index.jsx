@@ -1,12 +1,11 @@
 
-import man from '@/assets/shared/desktop/image-best-gear.jpg';
-import { ProductCard, Body } from 'components'
+import person from '@/assets/shared/tablet/image-best-gear.jpg';
 import { prefooter } from "/lib/db/texts"
+import { Image } from 'components';
 
 import s from './s.module.scss'
 
 const Prefooter = () => {
-
     const headline =
         <>
             {"Bringin you the"} <span>best</span> {"audio gear"}
@@ -14,11 +13,14 @@ const Prefooter = () => {
 
     return (
         <section className={s.section}>
-            <ProductCard isLeft={false} alignCenter={true} src={man} >
-                <h1> {headline} </h1>
-                <p> {prefooter} </p>
-            </ProductCard>
-        </section>
+      
+                <Image className={s.image} isCategory={true} autoSizeBypass={true} src={person} alt="" />
+                <div className={s.text}>
+                    <h4> {headline} </h4>
+                    <p> {prefooter} </p>
+                </div>
+        
+        </section >
 
     )
 }

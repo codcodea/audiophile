@@ -13,13 +13,15 @@ import StatefulButtons from "./elements/button/stateful";
 import Logo from "./elements/logo";
 import Separator from "./elements/separator";
 import Social from "./elements/social";
-import ProductCard from "./pages/_factory/card";
+
 import GoBack from "./pages/product/goback";
 
 import ProductFactory from "./pages/_factory";
 import ProductPage from "./pages/product";
+import ProductCard from "./pages/_factory/card";
 
 import Prefooter from "./elements/prefooter";
+import Img from "./elements/image";
 import Banner_YX1 from "./pages/home/YX1";
 import Banner_ZX7 from "./pages/home/ZX7";
 import Banner_ZX9 from "./pages/home/ZX9";
@@ -34,6 +36,8 @@ import Confirmation from "./checkout/confirmation";
 import CartModal from "./checkout/modal";
 
 import TopBanner from "./pages/category/topbanner";
+
+
 
 export {
     Banner_YX1,
@@ -51,14 +55,15 @@ export {
     HeroBanner as Hero,
     Logo, Navigation,
     Prefooter,
-    ProductCard,
     ProductFactory,
     ProductPage,
+    ProductCard,
     Radio,
     Separator,
     Social,
     StatefulButtons,
     TextField,
-    Toolbar, TopBanner
+    Toolbar, TopBanner,
+    Img as Image
 };
 

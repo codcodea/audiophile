@@ -8,7 +8,7 @@ import db from 'lib/db'
 const ProductPage = async ({ params }) => {
     const { category, product } = params;   
     const { features, includes, gallery, others } = db.getProductPage(product);
-
+    
     return (
         <>
             <GoBack />

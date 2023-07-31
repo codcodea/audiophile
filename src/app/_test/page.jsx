@@ -1,19 +1,27 @@
 
-import { Button, Image, StatefulButtons } from 'components';
-import toUSD from 'lib/toUSD';
+
 import s from './s.module.scss';
+import { Button, Image } from 'components';
 
-const ProductCard = ({ data, isCategory }) => {
+import db from '/lib/db';
+import toUSD from 'lib/toUSD';
+import { StatefulButtons } from 'components';
 
-    let { id, isLeft, image, name, description, isNew, price, slug, category } = data;
 
-    isLeft = isCategory ? isLeft : true;
+const Page = () => {
+
+    isCategory = false;
+    
+    const c = db.getCategoryPage("headphones")
+    const p = db.getProductPage("xx99-mark-one-headphones")
+
+    const { isLeft, image, name, description, isNew, price, slug, category } = p;
 
     // join classes
-    const isWrapping = isCategory ? s.wrap : null; 
-    const section = isCategory ? [s.section, isWrapping].join(' ') : [s.section].join(' ');
+    const wrapping = isCategory ? s.wrap : null; 
+    const section = isCategory ? [s.section, wrapping].join(' ') : [s.section].join(' ');
     const imgStyles = isLeft ? s.imgWrap : [s.imgWrap, s.reverse].join(' ');
-    const textStyles = isLeft ? [s.txtWrap, isWrapping].join(' ') : [s.txtWrap, s.reverse, isWrapping].join(' ');
+    const textStyles = isLeft ? [s.txtWrap, wrapping].join(' ') : [s.txtWrap, s.reverse, wrapping].join(' ');
 
     // Text fields 
     const isNewProduct = isNew ? "New Product" : "";
@@ -22,8 +30,8 @@ const ProductCard = ({ data, isCategory }) => {
 
     // Button type
     const button = isCategory
-        ? <Button type="filled" color="orange" alignCenter={isCategory} slug={relslug}> SEE PRODUCT </Button>
-        : <StatefulButtons id={id} directUpdate={false}> SEE PRODUCT </StatefulButtons>
+        ? <Button type="filled" color="orange" isCategory={isCategory} slug={relslug}> SEE PRODUCT </Button>
+        : <StatefulButtons directUpdate={false}> SEE PRODUCT </StatefulButtons>
 
     return (
         <section className={section}>
@@ -43,4 +51,4 @@ const ProductCard = ({ data, isCategory }) => {
     );
 }
 
-export default ProductCard;
+export default Page;

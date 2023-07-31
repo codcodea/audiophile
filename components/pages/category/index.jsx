@@ -1,16 +1,11 @@
 
-import ProductItem from '../_factory/item';
+import ProductCard from "../_factory/card"
 
-const CategoryPage = ({ category, data }) => {
+const CategoryPage = ({ data }) => {
     return (
         <>
             {data.reverse().map(item => {
-                const props = { image: item.categoryImage, isLeft: item.isLeft, category, hasCounter: false, ...item }
-                return (
-                    <section key={item.id}>
-                        <ProductItem key={item.id} data={props} />
-                    </section>
-                )
+                 return <ProductCard key={item.id} isCategory={true} data={item} />   
             })}
         </>
     )
