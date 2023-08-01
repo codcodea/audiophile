@@ -19,14 +19,20 @@ const useStore = create<Store>((set, get) => ({
             else
                 state.cart[index].tempCount = tempCount;
         }))
+
+        console.log(get().cart);    
     },
 
     setCommitCount: (id) => {
+
+        console.log("Committing count");    
         set(produce((state) => {
             const index = state.cart.findIndex((item) => item.id === id);
             if (index === -1) get().setCartId(id, 0);
             else state.cart[index].count = state.cart[index].tempCount;
         }))
+
+        console.log(get().cart);    
     },
 
     getCartItem: (id) => {

@@ -1,17 +1,17 @@
 "use client"
 
-import { Button, ButtonCounter } from 'components';
+import { ButtonCounter } from 'components';
 import useButton from './hook';
 import s from './s.module.scss';
 
 const StatefulButtons = ({ id, directUpdate = false, alignCenter = false }) => {
 
-    const { count, tempCount, handleClick } = useButton(id, directUpdate);
+    const { count, tempCount, handleClick, handleCommit } = useButton(id, directUpdate);
 
-    const styles = alignCenter 
-        ? ["buttonWrapper", s.alignCenter].join(' ') 
-        : ["buttonWrapper"].join(' ');
-
+    // join styles
+    const align = alignCenter ? [s.alignCenter, "buttonWrapper"] : "buttonWrapper";
+    const styles = [s.filled, s.orange, "button", "button-font"].join(' ');
+   
     const props = { 
         id, 
         count: directUpdate ? count : tempCount, 
@@ -19,12 +19,12 @@ const StatefulButtons = ({ id, directUpdate = false, alignCenter = false }) => {
     };
 
     return (
-        <div className={styles}>
+        <div className={align}>
             <ButtonCounter {...props} />
             {!directUpdate &&
-                <Button onClick={handleClick} type="filled" color="orange">
-                    <span className="button-font">{"Add to cart"}</span>
-                </Button>
+                <button id={id} onClick={handleCommit} className={styles}> 
+                  <span className="button-font">{"Add to cart"}</span>
+                </button>
             }
         </div>
     )

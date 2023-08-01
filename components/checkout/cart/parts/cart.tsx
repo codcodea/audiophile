@@ -59,8 +59,8 @@ const Cart = ({ setOpen, isSummary = false, onClick} : CartProps)  => {
     )
 
     const button = isSummary
-        ? <Button onClick={onClick} className={s.button} type="filled" color="orange"> Continue & Pay </Button>
-        : <Button onClick={handleClick} className={s.button} type="filled" color="orange"> Checkout </Button>;
+        ? <Button id={null} onClick={onClick} className={s.button} type="filled" color="orange"> Continue & Pay </Button>
+        : <Button id={null} onClick={handleClick} className={s.button} type="filled" color="orange"> Checkout </Button>;
 
     return (
         <>

@@ -67,7 +67,7 @@ const ConfirmationPage = ({ handler }: Props, ref) => {
 
                     </div>
                     <div className={s.button}>
-                        <Button onClick={handler} className={s.button} type="filled" color="orange" slug="/"> Back to home </Button>
+                        <Button id={null} onClick={handler} className={s.button} type="filled" color="orange" slug="/"> Back to home </Button>
                     </div>
 
                 </article>

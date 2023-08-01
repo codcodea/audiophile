@@ -123,11 +123,11 @@ label {
     }
 
     .button {
-        min-width: 135px;
+        min-width: 140px;
     }
 
     .button-font {
-        font-size: 13px;
+        font-size: 12px;
     }
 }
 

@@ -15,11 +15,12 @@ const Summary = () => {
     const reset = useStore(state => state.reset);
 
     const ref = useClickAway(() => setOpen(false));
-    const handleOpen = () => setOpen(state => !state);
+    
+    const handleOpen = () => setOpen(state => !state)
 
-    const handleCommit = () => {
+    const handelClick = () => {
+        setOpen(false);
         reset();
-        setOpen(state => !state);
         router.push('/');
     }
 
@@ -29,7 +30,7 @@ const Summary = () => {
                 <Cart onClick={handleOpen} isSummary={true} />
             </div>
             <aside>
-                {isOpen && <Confirmation ref={ref} handler={handleCommit}/>}
+                {isOpen && <Confirmation ref={ref} handler={handelClick} />}
             </aside>
         </>
     )

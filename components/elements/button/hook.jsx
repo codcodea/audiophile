@@ -7,10 +7,12 @@ const useButton = (id, directUpdate) => {
     const count = useStore(state => state.getCartId(id)?.count || 0);
     const setCartId = useStore(state => state.setCartId);
     const setCommitCount = useStore(state => state.setCommitCount);
- 
+
+    const handleCommit = (e) => {
+        if(e.currentTarget.id == id) setCommitCount(id);
+    }
+
     const handleClick = (e) => {
-        if(e.target.innerHTML === "Add to cart") return setCommitCount(id);
-    
         if(directUpdate) {
             if (e.target.className === s.minus) count > 0 && setCartId(id, count - 1);
             else setCartId(id, count + 1);
@@ -24,7 +26,8 @@ const useButton = (id, directUpdate) => {
     return {
         count,
         tempCount,
-        handleClick
+        handleClick,
+        handleCommit
     }
 }
 
