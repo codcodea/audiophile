@@ -5,7 +5,7 @@ const Banner_YX1 = () => {
     const slug = "earphones/yx1-earphones";
 
     return (
-        <section>
+        <section className={s.section}>
             <article className={s.wrap}>
                 <div className={s.image} />
                 <div className={s.text}>

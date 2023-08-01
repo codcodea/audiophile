@@ -1,4 +1,3 @@
-
 import s from './s.module.scss';
 
 import { Facebook, Twitter, Instagram } from './_icons';

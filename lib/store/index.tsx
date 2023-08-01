@@ -1,4 +1,3 @@
-
 import Store from "./types";
 import db from "../db";
 import { create } from "zustand";
@@ -25,8 +24,8 @@ const useStore = create<Store>((set, get) => ({
     setCommitCount: (id) => {
         set(produce((state) => {
             const index = state.cart.findIndex((item) => item.id === id);
-            if (index === -1) throw ERROR();
-            state.cart[index].count = state.cart[index].tempCount;
+            if (index === -1) get().setCartId(id, 0);
+            else state.cart[index].count = state.cart[index].tempCount;
         }))
     },
 

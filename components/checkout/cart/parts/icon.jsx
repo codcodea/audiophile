@@ -1,4 +1,3 @@
-
 import s from './icon.module.scss'
 import useStore from '/lib/store';
 

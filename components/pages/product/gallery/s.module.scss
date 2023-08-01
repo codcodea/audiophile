@@ -1,17 +1,16 @@
 %image {
     position: relative;
     width: 100%;
-    height: auto;
-    object-fit: contain;
+    height: 100%;
 }
 
 .section {
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 2.2fr 3fr;
     grid-template-rows: auto auto;
     aspect-ratio: 16/9;
     gap: 2vw;
-
+  
     img {
         border-radius: 6px;
     }
@@ -39,27 +38,24 @@
     .section {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 2fr;
-        gap: 5%;
-        height: 1200px;
+        grid-template-rows: 1fr 1fr 2.1fr;
+        aspect-ratio: 1/2;
+        gap: 2%;
         margin: 10vh auto;
 
         .img1 {
-            width: 100%;
-            height: 100%;
-            
+            grid-column: 1;
+            grid-row: 1; 
         }
         
         .img2 {
-            width: 100%;
-            height: 100%;
+            grid-column: 1;
+            grid-row: 2;
         }
         
         .img3 {
             grid-column: 1;
             grid-row: 3;
-            width: 100%;
-            height: 100%;
         }
     }
 }

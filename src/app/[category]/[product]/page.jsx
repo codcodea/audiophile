@@ -2,7 +2,6 @@ import { ProductPage } from 'components';
 import db from 'lib/db';
 import Link from 'next/link';
 
-
 export default function Products({ params }) {
 
     const { product } = params;

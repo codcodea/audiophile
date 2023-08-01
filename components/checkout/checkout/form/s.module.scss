@@ -111,12 +111,19 @@
 
 .footer {
     display: grid;
-    grid-template-columns: 50px auto;
+    grid-template: 1fr / 50px auto;
     column-gap: 1em;
     font-size: 12px;
     line-height: 1.5;
 
+    & img {
+        grid-row: 1;
+        grid-column: 1;
+    }
+
     & p {
+        grid-row: 1;
+        grid-column: 2;
         color: var(--checkout-gray)
     }
 }

@@ -49,7 +49,6 @@ const Form = () => {
             </div>
             {paymentMethod}
         </form>
-
     )
 }
 

@@ -76,7 +76,6 @@
 }
 
 @media (max-width: 767px) {
-
     .header {
         & section {
             display: grid;
@@ -107,7 +106,7 @@
         display: flex;
         justify-content: left;
         grid-column: 1;
-     
+
     }
 
     .cart {
@@ -127,7 +126,6 @@
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-
     .header {
         & section {
             display: grid;

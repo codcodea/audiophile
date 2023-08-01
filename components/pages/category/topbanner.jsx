@@ -1,4 +1,3 @@
-
 import { Separator } from 'components'
 import s from './s.module.scss'
 

@@ -26,11 +26,11 @@ const HeroBanner = () => {
                             <div className={s.body}>
                                 <p color="gray">{hero}</p>
                             </div>
-                            <div className={s.button}>
-                                <Button slug={slug} color="orange" type="filled"> 
-                                    <span className="button-font"> SEE PRODUCT </span>
-                                </Button>
-                            </div>
+               
+                            <Button className={s.button} slug={slug} color="orange" type="filled"> 
+                                <span className="button-font"> SEE PRODUCT </span>
+                            </Button>
+    
                         </div>
                     </div>
                     <figure className={s.imageWrap}>

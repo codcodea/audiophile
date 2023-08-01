@@ -1,17 +1,15 @@
 "use client"
 
 import { useEffect } from 'react';
-import stickyToolbar from '../modal/sticky';
+
 import Form from './parts/form';
 import Summary from './parts/summary';
 import s from './s.module.scss';
+import sideEffect from './sideEffects';
 
 const Checkout = () => {
 
-    useEffect(() => {
-        stickyToolbar(true)
-        return () => stickyToolbar(false)
-    },[])
+    useEffect(() => sideEffect(),[])
 
     return (
         <div className={s.wrap}>

@@ -46,7 +46,7 @@ export interface ProductPage {
     slug: string;
     name: string;
     category: string;
-    image: string; 
+    image: string;
     isNew: boolean;
     price: number;
     description: string;
@@ -56,11 +56,9 @@ export interface ProductPage {
     others: Others[];
 }
 
-
 export interface CategoryPage extends ProductPage {
-   isLeft: boolean;
+    isLeft: boolean;
 }
-
 
 export interface CartProduct {
     id: number;

@@ -2,15 +2,15 @@
     grid-row: 1;
     grid-column: 1;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; 
     user-select: none;
-
+   
     & h6 {
         font-size: 17px;
         font-weight: 600;
         line-height: 1;
+        width: auto;
     }
 
     & p {
@@ -29,32 +29,31 @@
 .wrapFooter {
     grid-row: 3;
     grid-column: 1;
-    display: flex;
-    display: block;
     user-select: none;
 
     .footer {
         width: 100%;
-        display: inline-flex;
+        display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
+        align-items: center; 
         user-select: none;
+
+        & h6 {
+            font-size: 17px;
+            line-height: 1;
+            width: auto;
+        }
+
+        & p {
+            font-size: 15px;
+            color: var(--checkout-gray);
+            line-height: 1;
+        }
     }
     
     .footer:last-child {
         margin: 1em 0;
-    }
-    
-    & p {
-        font-size: 15px;
-        color: var(--checkout-gray);
-        line-height: 1;
-    }
-    
-    & h6 {
-        font-size: 17px;
-        line-height: 1;
     }
 }
 

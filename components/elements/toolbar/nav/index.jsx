@@ -1,11 +1,9 @@
-
 "use client"
 
 import s from "../s.module.scss";
-export const navigation = ["home", "headphones", "speakers", "earphones"];
-
 import Link from "next/link";
 
+export const navigation = ["home", "headphones", "speakers", "earphones"];
 
 const Navigation = ({isFooter = false}) => {
 

@@ -11,7 +11,7 @@ const Other = ({ slug, text, image }) => {
             </div>
             <h5 className={s.header}>{text}</h5>
             <div className={s.button}>
-                <Button slug={slug} type="filled" color="orange">
+                <Button slug={slug} alignCenter={true} type="filled" color="orange">
                     <span className="button-font">See Product</span>
                 </Button>
             </div>

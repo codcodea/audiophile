@@ -1,19 +1,21 @@
-
 .wrap {
     background-color: var(--checkout-bg);
 
     section {
-        width: 80%;
+        max-width: 90%;
+        width: 1200px;
         margin: 0 auto;
+        box-sizing: content-box;
+        display: block;
         background-color: var(--checkout-bg);
-    }
 
-    article {
-        display: grid;
-        grid-template: 1fr / 66% 33%;
-        column-gap: 2em;
-        padding: 10vh 0;
-    } 
+        article {
+            display: grid;
+            grid-template: 1fr / 2fr 1fr;
+            column-gap: 2em;
+            padding: 10vh 0;
+        } 
+    }
 }
 
 .form {
@@ -67,15 +69,15 @@
     .wrap {
         section {
             padding: 5vh 0;
-        }
-        
-        article {
-            display: grid;
-            grid-template: auto auto / 1fr;
-            gap: 2em;
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 0;
+
+            article {
+                display: grid;
+                grid-template: auto auto / 1fr;
+                gap: 2em;
+                max-width: 700px;
+                margin: 0 auto;
+                padding: 0;
+            }
         }
     }
 

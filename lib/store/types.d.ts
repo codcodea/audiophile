@@ -1,4 +1,3 @@
-
 import { CartProduct } from "../db/DB";
 
 type CartItem = {

@@ -5,7 +5,7 @@ const Banner_ZX7 = () => {
     const slug = "/speakers/zx7-speaker";
 
     return (
-        <section>
+        <section className={s.section}>
             <div className={s.wrap}>
                 <div className={s.text}>
                     <h4 color="black">ZX7 Speaker </h4>

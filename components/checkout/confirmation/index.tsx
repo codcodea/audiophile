@@ -1,6 +1,6 @@
 "use client"
 
-import { forwardRef, useState, useEffect, useMemo } from 'react';
+import { forwardRef, useState, useMemo } from 'react';
 import { Button, CartItem } from 'components'
 import CartModal from '../modal'
 import Image from 'next/image';
@@ -9,7 +9,6 @@ import useStore from 'lib/store';
 import toUSD from 'lib/toUSD';
 import s from './s.module.scss';
 
-// Types
 import { Cart, OrderDetails } from 'lib/store/types';
 type Props = { handler: () => void } // handler for the "Back to home" button
 
@@ -24,15 +23,19 @@ const ConfirmationPage = ({ handler }: Props, ref) => {
     const { grandTotal } = useStore(state => state.getOrderDetails()) as OrderDetails;
 
     // Flags used for the order summary
-    const [$ordersCount, $unfolds, $exactly3] = useMemo(() => [cart.length, cart.length > 3, cart.length === 3], [cart]);
-    const label = $exactly3 ? " " : $unfolds ? "View More" : "View Less";
-
+    const [$ordersCount, $unfolds, $exactly3] = useMemo(() => {
+        return [cart.length, cart.length > 3, cart.length === 3] 
+    }, [cart]);
+    
+    // In this version we show only 3 items in the order summary
     const showCards = useMemo(() => {
-        const len = viewMore ? $ordersCount : 3;
-        return cart.map((it, ix) => {
-            if (ix < len) return it;
-        });
-    }, [cart, $ordersCount, viewMore])
+        const len = $ordersCount > 3 ? 3 : $ordersCount;
+        return cart.slice(0, len);
+    }, [cart, $ordersCount])
+
+    // Text
+    const label = $exactly3 ? " " : $unfolds ? "View More" : "View Less";
+    const items = $ordersCount >= 3 ? `3 of ${$ordersCount}` : "";
 
     return (
         <>
@@ -50,14 +53,14 @@ const ConfirmationPage = ({ handler }: Props, ref) => {
                             {showCards.map((item, index) => {
                                 return <CartItem key={index} id={item.id} isSummary={true} />
                             })}
-                            {$unfolds && <div className={s.view}>
+                            {($unfolds) && <div className={s.view}>
                                 <hr />
-                                <p> {label}</p>
+                                <p> {items}</p>
                             </div>}
                         </div>
                         <div className={s.total}>
                             <div>
-                                <h6> Grand Total </h6>
+                                <h6> Grand Total {} </h6>
                                 <p> {toUSD(grandTotal)} </p>
                             </div>
                         </div>
@@ -73,5 +76,4 @@ const ConfirmationPage = ({ handler }: Props, ref) => {
     )
 }
 
-// Forward ref to the parent component for the ClickOutside handler
 export default forwardRef(ConfirmationPage);

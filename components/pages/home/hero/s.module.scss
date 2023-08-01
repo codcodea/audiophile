@@ -67,7 +67,6 @@
             grid-row: 4;
             width: 100%;
             margin-top: 0.5em;
-           
         }
     }
 }
@@ -100,6 +99,10 @@
             grid-template-columns: 1fr;
             grid-template-rows: 1fr;
         }
+
+        :global(.buttonWrapper) {
+            justify-content: center;
+        }
     }
 
     .textWrap {
@@ -108,8 +111,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
-       
 
         .text {
             width: min(80vw, 350px);
@@ -174,6 +175,10 @@
             grid-template-columns: 1fr;
             grid-template-rows: 1fr;
         }
+
+        :global(.buttonWrapper) {
+            justify-content: center;
+        }
     }
 
     .textWrap {
@@ -205,13 +210,13 @@
                 width: 80%;
             }
 
-            .button {
-                grid-column: 1;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-top: 2em;
-            }
+            // .button {
+            //     grid-column: 1;
+            //     display: flex;
+            //     justify-content: center;
+            //     align-items: center;
+            //     margin-top: 2em;
+            // }
         }
     }
 

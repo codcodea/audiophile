@@ -1,4 +1,3 @@
-
 import s from './s.module.scss';
 import { Social, Logo, Navigation } from 'components';
 import Text from './_text';
@@ -34,7 +33,6 @@ const Footer = () => {
             </section>
         </footer>
     );
-
 };
 
 export default Footer;

@@ -15,13 +15,13 @@ class DB {
     getCategoryPage(category: string): CategoryPage[] {
 
         const cat: Record[] = this.db.filter(item => item.category === category);
-        const a =  cat.map((item, index) => {
+        const a = cat.map((item, index) => {
             const product = this.getProductPage(item.slug);
-            const isLeft =  index % 2 === 0 ? true : false;
-            return {...product, isLeft}
+            const isLeft = index % 2 === 0 ? true : false;
+            return { ...product, isLeft }
         });
 
-        if(!a?.length) {
+        if (!a?.length) {
             throw new Error("Category not found");
         }
         return a;
@@ -67,7 +67,6 @@ class DB {
             price: product.price,
         };
     }
-
 }
 
 const db = new DB();

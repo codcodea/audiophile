@@ -17,11 +17,10 @@ const Banner_ZX9 = () => {
                     <h1>ZX9 Speaker</h1>
                     <p>{body}</p>
                     <Button color="black" type="filled" alignCenter={false} slug={slug}>
-                        <span className="button-font"> SEE PRODUCT </span>
+                        <span className="button-font"> See product</span>
                     </Button>
                 </div>
                 <div className={s.imageWrapper}>
-                   
                     <Image className={s.image} src={speaker} alt="product_zx9" />
                 </div>
             </article>

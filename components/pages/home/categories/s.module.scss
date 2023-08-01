@@ -1,4 +1,3 @@
-
 .section {
     display: flex;
     flex-direction: row;
@@ -21,10 +20,11 @@
         justify-content: flex-end;
         align-items: center;
 
-        h6 {
+        & h6 {
             width: unset;
             padding: 0;
-            margin-left: -1em;
+            margin-bottom: 0.3em;
+            line-height: 1;
         }
     }
 
@@ -33,6 +33,11 @@
         height: 50%;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    :global(.buttonWrapper) {
         justify-content: center;
         align-items: center;
     }
@@ -73,14 +78,13 @@
             }
         }
     }
-
-
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
     .wrap {
         .card {
-           height: 200px;
+            height: 200px;
+
             h6 {
                 font-size: 15px;
             }
@@ -95,7 +99,6 @@
         left: 11%;
         object-fit: contain;
     }
-    
 }
 
 @media (max-width: 1023px) {

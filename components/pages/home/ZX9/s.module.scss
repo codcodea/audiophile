@@ -1,4 +1,6 @@
 .section {
+    display: block;
+    margin: 3vh auto;
     position: relative;
     overflow: hidden;
 
@@ -11,7 +13,7 @@
         background-image: url('~/public/assets/home/desktop/pattern-circles.svg');
         background-repeat: no-repeat;
         background-size: contain;
-        background-position: -17vw;
+        background-position: -19vw;
         animation: pulse 1.5s ease-in-out 2;
     }
 
@@ -26,12 +28,14 @@
         align-items: center;
 
         background-color: var(--color-orange-1);
-        border-radius: 8px;
+        border-radius: 6px;
 
         .textWrapper {
+            max-width: 300px;
             width: 70%;
             height: 60%;
             grid-column: 2;
+            z-index: 3;
 
             display: flex;
             flex-direction: column;
@@ -74,7 +78,6 @@
 @media only screen and (max-width: 767px) {
 
     .section {
-
         .circle {
             top: -7%;
             left: 0;
@@ -111,7 +114,7 @@
 
                 }
 
-                :gloal(.buttonWrapper) {
+                :global(.buttonWrapper) {
                     justify-content: center;
                     align-items: center;
                 }
@@ -142,7 +145,6 @@
 
 @media (min-width: 768px) and (max-width: 1023px) {
     .section {
-
         .circle {
             top: -20%;
             left: 0;
@@ -171,7 +173,7 @@
                     text-align: center;
                 }
 
-                :gloal(.buttonWrapper) {
+                :global(.buttonWrapper) {
                     justify-content: center;
                     align-items: center;
                 }

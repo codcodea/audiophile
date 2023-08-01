@@ -5,47 +5,54 @@
     align-items: flex-start;
 }
 
-.image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
+.section {
+    display: block;
+    margin: 3vh auto;
 
-.text {
-    @extend %flex;
-    width: 50%;
-    height: 100%;
-    padding-left: 3em;
-}
+    .wrap {
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 6px;
+    }
 
-.wrap {
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    .image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 6px;
+    }
+    
+    .text {
+        @extend %flex;
+        width: 50%;
+        height: 100%;
+        padding-left: 3em;
+    }
 }
 
 @media only screen and (max-width: 767px) {
-    .text {
-        width: 100%;
-        height: 100%;
-        padding-left: 2em;
-    }
-
     .wrap {
         aspect-ratio: 1/1;
         background-image: url("~/public/assets/home/mobile/image-speaker-zx7.jpg");
+
+        .text {
+            width: 100%;
+            height: 100%;
+            padding-left: 2em;
+        }
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    .text {
-        width: 60%;
-    }
-
     .wrap {
         height: 30vh;
         background-image: url("~/public/assets/home/tablet/image-speaker-zx7.jpg");
+
+        .text {
+            width: 60%;
+        }
     }
 }
 

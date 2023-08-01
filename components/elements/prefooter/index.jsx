@@ -1,4 +1,3 @@
-
 import person from '@/assets/shared/tablet/image-best-gear.jpg';
 import { prefooter } from "/lib/db/texts"
 import { Image } from 'components';
@@ -13,15 +12,12 @@ const Prefooter = () => {
 
     return (
         <section className={s.section}>
-      
-                <Image className={s.image} isCategory={true} autoSizeBypass={true} src={person} alt="" />
-                <div className={s.text}>
-                    <h4> {headline} </h4>
-                    <p> {prefooter} </p>
-                </div>
-        
+            <Image className={s.image} isCategory={true} autoSizeBypass={true} src={person} alt="" />
+            <div className={s.text}>
+                <h4> {headline} </h4>
+                <p> {prefooter} </p>
+            </div>
         </section >
-
     )
 }
 
