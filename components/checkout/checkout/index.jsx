@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import Form from './parts/form';
 import Summary from './parts/summary';
 import s from './s.module.scss';
-import sideEffect from './sideEffects';
+import sideEffect from './sideeffects';
 
 const Checkout = () => {
 
