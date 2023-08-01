@@ -50,7 +50,13 @@
     top: -30%;
     left: 4%;
     object-fit: contain;
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+        scale: 1.1;
+    }
 }
+
 
 
 
