@@ -33,7 +33,7 @@
             ],
             "@/*": [
                 "./src/*"
-            ]
+            ],
         }
     },
     "include": [
@@ -43,8 +43,8 @@
         "**/*.tsx",
         "**/*.json",
         "components/elements/button/counter.jsx",
-        "components/pages/product/index.jsx",
-        "lib/db/texts.js"
+        "page/product/index.tsx",
+        "lib/db/data/texts.js"
     ],
     "exclude": [
         "node_modules"

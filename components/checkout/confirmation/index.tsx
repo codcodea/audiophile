@@ -9,7 +9,7 @@ import useStore from 'lib/store';
 import toUSD from 'lib/toUSD';
 import s from './s.module.scss';
 
-import { Cart, OrderDetails } from 'lib/store/types';
+import { Cart, OrderDetails } from 'lib/store/types/types';
 type Props = { handler: () => void } // handler for the "Back to home" button
 
 
@@ -67,7 +67,7 @@ const ConfirmationPage = ({ handler }: Props, ref) => {
 
                     </div>
                     <div className={s.button}>
-                        <Button id={null} onClick={handler} className={s.button} type="filled" color="orange" slug="/"> Back to home </Button>
+                        <Button onClick={handler} type="filled" color="orange" slug="/"> Back to home </Button>
                     </div>
 
                 </article>

@@ -8,22 +8,7 @@
     }
 }
 
-%flex {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-%button {
-    outline: none;
-    border: none;
-    cursor: pointer;
-    user-select: none;
-    padding: 1.6em 1.5em;
-}
-
-.alignCenter{
+.alignCenter {
     composes: buttonWrapper from global;
     justify-content: center;
     align-items: center;
@@ -41,37 +26,15 @@
     @include button(var(--color-white-1), var(--color-black-1), #1f1f1fc7);
 }
 
-.white {
-    @include button(var(--color-black-1), var(--color-white-0), var(--color-black-1));
-    border: 1px solid var(--color-black-1);
-
-    &:hover {
-        color: var(--color-white-0);
-    }
-}
-
-.transparent {
-    @include button(var(--color-black-1), transparent, #a2a2a2a3);
-    
-    &:hover {
-        color: #252525;
-    }
-}
-
 .filled {
-    @extend %button;
-    transition: all 0.3s ease-in-out;
-}
-
-%outline {
-    @extend %button;
-    border: 1px solid var(--color-black-1);
-    border-radius: 4px;
     transition: all 0.3s ease-in-out;
 }
 
 .outline {
-    @extend %outline;
+    border: 1px solid var(--color-black-1);
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+
     &:hover {
         scale: 1.03;
         border: 2px solid var(--color-black-1);
@@ -79,7 +42,6 @@
 }
 
 .text {
-    @extend %button;
     background-color: transparent;
     color: var(--color-button-gray);
     transition: all 0.3s ease-in-out;
@@ -96,8 +58,6 @@
 }
 
 .filledDynamic {
-    @extend %button;
-
     font-weight: 600;
     background-color: transparent;
     transition: all 0.2s ease-in-out;
@@ -112,37 +72,10 @@
     }
 }
 
-
-.counter {
-    @extend %button;
-    @extend %flex;
-    min-width: 100px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 1.3em;
-
-    .minus {
-        @extend %flex;
-        width: auto;
-        font-size: 1.4em;
-    }
-
-    .number {
-        @extend %flex;
-        font-size: 1em;
-        font-weight: 700;
-    }
-
-    .plus {
-        @extend %flex;
-        font-size: 1.4em;
-    }
-}
-
 @media (max-width: 1023px) {
     .filledDynamic {
         border: 1px solid var(--color-black-1);
+
         &:hover {
             background-color: transparent;
             scale: 1.05;
@@ -166,7 +99,7 @@
         }
     }
 
-    .alignCenter{
+    .alignCenter {
         justify-content: initial;
         align-items: initial;
     }

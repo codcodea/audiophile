@@ -1,0 +1,26 @@
+.buttonWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1em;
+}
+
+.button {
+    user-select: none;
+    min-width: 160px;
+    height: 48px;
+    padding: 0 1.3em;
+
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.button-font {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 0;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+}

@@ -1,0 +1,144 @@
+.section {
+    display: grid;
+    column-gap: 2em;
+
+    .imgWrap {
+        order: 1;
+        overflow: hidden;
+
+        &.reverse {
+            order: 2;
+        }
+    }
+
+    .txtWrap {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        order: 2;
+
+        &.reverse {
+            order: 1;
+            align-items: flex-start;
+        }
+
+        .card {
+            width: 80%;
+            display: grid;
+            grid-template: 25px auto auto max-content max-content / 1fr;
+
+            :global(.overline) {
+                grid-row: 1;
+            }
+
+            h2 {
+                grid-row: 2;
+            }
+
+            p {
+                grid-row: 3;
+            }
+
+            h6 {
+                grid-row: 4;
+            }
+
+            :global(.buttonWrapper) {
+                grid-row: 5;
+            }
+
+            :global(.button) {
+               height: 50px;
+               padding: 0 1.5em;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .section {
+        grid-template: 1fr auto / 1fr;
+        gap: 2em;
+
+        .txtWrap {
+            width: 80%;
+            height: max-content;
+            grid-row: 2;
+            align-items: flex-start;
+
+            .card {
+                gap: 1.5em;
+            }
+
+            &.wrap {
+                width: 100%;
+                text-align: center;
+                align-items: center;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .section {
+        grid-template: 1fr / 1fr 1fr;
+        aspect-ratio: 7/6;
+        gap: 4em;
+
+        &.wrap {
+            grid-template: 1fr auto / 1fr;
+            aspect-ratio: unset;
+            gap: 2em;
+        }
+
+        .imgWrap {
+            order: 1;
+            overflow: hidden;
+
+            &.reverse {
+                order: inherit; /* bypass reverse */
+            }
+        }
+
+        .txtWrap {
+            width: 100%;
+            aspect-ratio: 6/7;
+
+            align-items: flex-end;
+            text-align: left;
+            order: 2;
+        
+            .card {
+                gap: 1.5em;
+            }
+
+            &.wrap {
+                text-align: center;
+                align-items: center;
+                aspect-ratio: unset;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .section {
+        grid-template: 1fr / 1fr 1fr;
+
+        .txtWrap {
+            width: 100%;
+            aspect-ratio: 7/6;
+
+            align-items: flex-end;
+            text-align: left;
+
+            .card {
+                min-height: 80%;
+                gap: 0.5em;
+            }
+        }
+    }
+}

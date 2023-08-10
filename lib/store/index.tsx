@@ -1,16 +1,21 @@
-import Store from "./types";
-import db from "../db";
-import { create } from "zustand";
 import { produce } from "immer";
-import { SHIPPING_FEE, ERROR } from "./constants";
+import { create } from "zustand";
+import db from "../db";
+import { ERROR, SHIPPING_FEE } from "./constants";
+import Store from "./types/types";
 
 const useStore = create<Store>((set, get) => ({
+
+    // The cart
     cart: [],
 
+    // Get the cart with items with counts
     getCart: () => get().cart.filter(item => item.count > 0),
 
+    // Get the by id
     getCartId: (id) => get().cart.find((item) => item.id === id),
 
+    // Set the cart by id, tempCount is used on the product page
     setCartId: (id, tempCount) => {
         set(produce((state) => {
             const index = state.cart.findIndex((item) => item.id === id);
@@ -19,27 +24,24 @@ const useStore = create<Store>((set, get) => ({
             else
                 state.cart[index].tempCount = tempCount;
         }))
-
-        console.log(get().cart);    
     },
 
+    // Set the cart to tempCount (used on the product page)
     setCommitCount: (id) => {
-
-        console.log("Committing count");    
         set(produce((state) => {
             const index = state.cart.findIndex((item) => item.id === id);
             if (index === -1) get().setCartId(id, 0);
             else state.cart[index].count = state.cart[index].tempCount;
         }))
-
-        console.log(get().cart);    
     },
 
+    // Get the cart item
     getCartItem: (id) => {
         const { name, image, price } = db.getCartProduct(id);
         return { id, name, image, price }
     },
 
+    // Calculate and return the order details
     getOrderDetails: () => {
         const cart = get().cart;
         return cart.reduce((acc, { id, count }) => {
@@ -56,6 +58,7 @@ const useStore = create<Store>((set, get) => ({
         }, { total: 0, shipping: 0, incVAT: 0, grandTotal: 0 })
     },
 
+    // Reset the cart
     reset: () => set({ cart: [] }),
 }))
 

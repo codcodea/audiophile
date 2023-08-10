@@ -5,7 +5,7 @@ import toUSD from 'lib/toUSD';
 import s from './cart.module.scss';
 import { useRouter } from 'next/navigation';
 import { Button, CartItem } from 'components'
-import { Cart as CartType, OrderDetails } from 'lib/store/types';
+import { Cart as CartType, OrderDetails } from 'lib/store/types/types';
 
 type CartProps = {    
     setOpen: (boolean) => boolean,  // cart open open state
@@ -59,8 +59,8 @@ const Cart = ({ setOpen, isSummary = false, onClick} : CartProps)  => {
     )
 
     const button = isSummary
-        ? <Button id={null} onClick={onClick} className={s.button} type="filled" color="orange"> Continue & Pay </Button>
-        : <Button id={null} onClick={handleClick} className={s.button} type="filled" color="orange"> Checkout </Button>;
+        ? <Button onClick={onClick} type="filled" color="orange"> Continue & Pay </Button>
+        : <Button onClick={handleClick} type="filled" color="orange"> Checkout </Button>;
 
     return (
         <>

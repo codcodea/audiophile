@@ -1,5 +1,5 @@
 import person from '@/assets/shared/tablet/image-best-gear.jpg';
-import { prefooter } from "/lib/db/texts"
+import { prefooter } from "/lib/db/data/texts"
 import { Image } from 'components';
 
 import s from './s.module.scss'

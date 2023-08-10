@@ -1,0 +1,43 @@
+
+header {
+    margin: 0 auto;
+}
+
+main {
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: var(--color-site-background);
+    max-width: var(--site-max-width);
+}
+
+section {    
+    margin: 10vh auto 15vh auto;
+    max-width: var(--site-max-width);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+    section {
+        margin: 5vh auto;
+        max-width: 88%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    section {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1024px) {
+    section {
+        width: 80%;
+    }
+}

@@ -1,7 +1,7 @@
 import s from './s.module.scss';
 import Image from 'next/image';
 
-const Img = ({ isCategory = false, autoSizeBypass = false, src }) => {
+const Img = ({ isCategory = false, autoSizeBypass = false, src, alt = "product_image" }) => {
     
     const tabletOverride = isCategory ? s.isCategory : null;
     const auto = autoSizeBypass ? s.autoSizeBypass : null;
@@ -13,7 +13,7 @@ const Img = ({ isCategory = false, autoSizeBypass = false, src }) => {
             <Image className={contain} src={src}
                 fill={true}
                 sizes="50%"
-                alt="product_image"
+                alt={alt}
             />
         </div>
     );

@@ -1,4 +1,4 @@
-import './css/global.css'
+import './css/global.scss'
 import manrope from './css/fonts'
 import { Toolbar, Footer } from 'components'
 

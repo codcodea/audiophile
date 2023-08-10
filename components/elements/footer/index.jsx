@@ -1,6 +1,6 @@
 import s from './s.module.scss';
 import { Social, Logo, Navigation } from 'components';
-import Text from './_text';
+import Text from './text';
 import Link from 'next/link';
 
 const Copyright = () => {

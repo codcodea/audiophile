@@ -14,19 +14,19 @@ import Logo from "./elements/logo";
 import Separator from "./elements/separator";
 import Social from "./elements/social";
 
-import GoBack from "./pages/product/goback";
+import GoBack from "../page/product/goback";
 
-import ProductFactory from "./pages/_factory";
-import ProductCard from "./pages/_factory/card";
-import ProductPage from "./pages/product";
+import ProductFactory from "../page/_factory";
+import ProductCard from "../page/_factory/card";
+import ProductPage from "../page/product";
 
 import Img from "./elements/image";
 import Prefooter from "./elements/prefooter";
-import Banner_YX1 from "./pages/home/YX1";
-import Banner_ZX7 from "./pages/home/ZX7";
-import Banner_ZX9 from "./pages/home/ZX9";
-import CategoryBanner from "./pages/home/categories";
-import HeroBanner from "./pages/home/hero";
+import Banner_YX1 from "../page/home/YX1";
+import Banner_ZX7 from "../page/home/ZX7";
+import Banner_ZX9 from "../page/home/ZX9";
+import CategoryBanner from "../page/home/categories";
+import HeroBanner from "../page/home/hero";
 
 import Checkout from "./checkout/checkout";
 import CheckoutFooter from "./checkout/checkout/form/footer";
@@ -35,7 +35,8 @@ import TextField from "./checkout/checkout/form/textfield";
 import Confirmation from "./checkout/confirmation";
 import CartModal from "./checkout/modal";
 
-import TopBanner from "./pages/category/topbanner";
+import TopBanner from "../page/category/topbanner";
+import Home from "../page/home";
 
 export {
     Banner_YX1,
@@ -53,6 +54,7 @@ export {
     Footer,
     GoBack,
     HeroBanner as Hero, 
+    Home,
     Img as Image, 
     Logo, 
     Navigation,

@@ -1,52 +1,32 @@
-import _db from './data.json'
-import { Record, Database, CategoryPage, ProductPage, CartProduct } from './DB';
+import _db from './data/data.json'
+import { Record, Product, ProductExtras, Category, CartProduct } from './types/DB';
 
 class DB {
-    db: Database;
+    db: Record[];
 
     constructor() {
         this.db = _db;
     }
 
-    getSlugs(): string[] {
-        return this.db.map(item => item.slug);
-    }
-
-    getCategoryPage(category: string): CategoryPage[] {
-
-        const cat: Record[] = this.db.filter(item => item.category === category);
-        const a = cat.map((item, index) => {
-            const product = this.getProductPage(item.slug);
-            const isLeft = index % 2 === 0 ? true : false;
-            return { ...product, isLeft }
-        });
-
-        if (!a?.length) {
-            throw new Error("Category not found");
-        }
-        return a;
-    }
-
-    getProductPage(productSlug: string): ProductPage {
+    getProductPage(productSlug: string): Product {
         const item: Record = this.db.find(item => item.slug === productSlug);
-        if (!item) {
-            throw new Error("Product not found");
-        }
+        const newObj = (({ features, includes, gallery, others, ...rest }) => rest)(item);
+        return { isNew: item.new, isLeft: true, ...newObj }
+    }
 
-        return {
-            id: item.id,
-            name: item.name,
-            description: item.description,
-            slug: item.slug,
-            isNew: item.new,
-            image: "/" + item.img,
-            price: item.price,
-            features: item.features,
-            includes: item.includes,
-            gallery: item.gallery,
-            others: item.others,
-            category: item.category,
-        };
+    getProductExtras(productSlug: string): ProductExtras {
+        const product: Record = this.db.find(item => item.slug === productSlug);
+        const { features, includes, gallery, others } = product;
+        return { features, includes, gallery, others };
+    }
+
+    getCategoryPage(category: string): Category {
+        const cat: Record[] = this.db.filter(item => item.category === category);
+        return cat.map((item, index) => {
+            console.log(item.slug, index)
+            const product = this.getProductPage(item.slug) as Product;
+            return {...product, isLeft: index % 2 == 0};
+        });
     }
 
     getCategoryName(slug: string): string {
@@ -57,6 +37,7 @@ class DB {
     getCartProduct(id: number): CartProduct {
         const product: Record = this.db.find(item => item.id === id);
 
+        // Remove category name in the cart
         const wordsToRemove = ["headphones", "speaker", "earphones", "wireless"];
         const regexPattern = new RegExp(`\\b(${wordsToRemove.join('|')})\\b`, 'gi');
 

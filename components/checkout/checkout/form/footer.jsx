@@ -1,5 +1,5 @@
 import s from './s.module.scss';
-import { footer } from 'lib/db/texts';
+import { footer } from 'lib/db/data/texts';
 import footerIcon from '/public/assets/checkout/icon-cash-on-delivery.svg'
 import Image from 'next/image';
 

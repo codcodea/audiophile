@@ -1,4 +1,3 @@
-
 import s from "./s.module.scss";
 
 const stickyToolbar = (open) => {

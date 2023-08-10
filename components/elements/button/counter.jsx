@@ -1,10 +1,10 @@
 "use client"
 
-import s from './s.module.scss';
+import s from './c.module.scss';
 import { handleClickZoom } from './_functions';
 
 const ButtonCounter = ({ count, handleClick }) => {
-
+    
     const styles = [s["counter"], s["gray"], "button-font"].join(' ');
 
     return (
