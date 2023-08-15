@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import s from './s.module.scss';
+import s from './_s.module.scss';
 
 const Button = ({ id = null, type, color, className = null, isCategory = false, alignCenter = false, slug = "/", onClick = null, children }) => {
 

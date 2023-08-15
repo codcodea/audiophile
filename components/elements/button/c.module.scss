@@ -1,5 +1,4 @@
-
-@use "s.module.scss";
+@use "./_s.module.scss" as *;
 
 %flex {
     display: flex;
@@ -9,31 +8,38 @@
 }
 
 .gray {
-    @include s.button(var(--color-black-1), #f1f1f1, #f3f3f3);
+    @include button(var(--color-black-1), #eeeeee, #f3f3f3);
+    height: 100%;
 }
 
 .counter {
     @extend %flex;
     min-width: 100px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 2fr;
     grid-template-rows: 1fr;
-    gap: 1.3em;
+    cursor: default;
+    user-select: none;
+    height: 100%;
 
     .minus {
         @extend %flex;
+        grid-column: 1;
         width: auto;
         font-size: 1.4em;
+
     }
 
     .number {
         @extend %flex;
+        grid-column: 2;
         font-size: 1em;
         font-weight: 700;
     }
 
     .plus {
         @extend %flex;
+        grid-column: 3;
         font-size: 1.4em;
     }
 }

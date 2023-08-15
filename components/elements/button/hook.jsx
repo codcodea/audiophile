@@ -1,5 +1,5 @@
 import useStore from '/lib/store';
-import s from './s.module.scss';
+import c from './c.module.scss';
 
 const useButton = (id, directUpdate) => {
     
@@ -14,11 +14,11 @@ const useButton = (id, directUpdate) => {
 
     const handleClick = (e) => {
         if(directUpdate) {
-            if (e.target.className === s.minus) count > 0 && setCartId(id, count - 1);
+            if (e.target.className == c.minus) count > 0 && setCartId(id, count - 1);
             else setCartId(id, count + 1);
             setCommitCount(id);
         } else {
-            if (e.target.className === s.minus) tempCount > 0 && setCartId(id, tempCount - 1);
+            if (e.target.className == c.minus) tempCount > 0 && setCartId(id, tempCount - 1);
             else setCartId(id, tempCount + 1);
         }
     }

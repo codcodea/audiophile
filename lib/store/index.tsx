@@ -9,7 +9,7 @@ const useStore = create<Store>((set, get) => ({
     // The cart
     cart: [],
 
-    // Get the cart with items with counts
+    // Get the cart with items counts
     getCart: () => get().cart.filter(item => item.count > 0),
 
     // Get the by id
@@ -45,7 +45,7 @@ const useStore = create<Store>((set, get) => ({
     getOrderDetails: () => {
         const cart = get().cart;
         return cart.reduce((acc, { id, count }) => {
-            if (count === 0) return acc;
+            if (!count) return acc;
             const { price } = get().getCartItem(id);
             if (!price) throw ERROR();
 

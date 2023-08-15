@@ -45,6 +45,3 @@ const ProductCard = ({ data, isCategory }: Props) => {
 }
 
 export default ProductCard;
-
-
-

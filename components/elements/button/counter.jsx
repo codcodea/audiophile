@@ -1,17 +1,17 @@
 "use client"
 
-import s from './c.module.scss';
+import c from './c.module.scss';
 import { handleClickZoom } from './_functions';
 
 const ButtonCounter = ({ count, handleClick }) => {
     
-    const styles = [s["counter"], s["gray"], "button-font"].join(' ');
+    const styles = [c["counter"], c["gray"], "button-font"].join(' ');
 
     return (
         <div className={styles} onClick={(e) => handleClickZoom(e)} >
-            <span className={s.minus} onClick={handleClick} > - </span>
-            <span className={s.number}>{count}</span>
-            <span className={s.plus} onClick={handleClick} > + </span>
+            <span className={c.minus} onClick={handleClick} > - </span>
+            <span className={c.number}>{count}</span>
+            <span className={c.plus} onClick={handleClick} > + </span>
         </div>
     )
 }

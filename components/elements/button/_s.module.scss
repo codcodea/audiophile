@@ -14,10 +14,6 @@
     align-items: center;
 }
 
-.gray {
-    @include button(var(--color-black-1), #f1f1f1, #f3f3f3);
-}
-
 .orange {
     @include button(var(--color-white-1), var(--color-orange-1), var(--color-orange-0));
 }

@@ -2,7 +2,7 @@
 
 import { ButtonCounter } from 'components';
 import useButton from './hook';
-import s from './s.module.scss';
+import s from './_s.module.scss';
 
 const StatefulButtons = ({ id, directUpdate = false, alignCenter = false }) => {
 
