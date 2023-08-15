@@ -4,7 +4,6 @@ import toUSD from 'lib/toUSD';
 import s from './s.module.scss';
 import c from 'lib/classes';
 
-
 type Props = { data: Product, isCategory: boolean }
 
 const ProductCard = ({ data, isCategory }: Props) => {
