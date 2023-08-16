@@ -5,7 +5,7 @@ import { handleClickZoom } from './_functions';
 
 const ButtonCounter = ({ count, handleClick }) => {
     
-    const styles = [c["counter"], c["gray"], "button-font"].join(' ');
+    const styles = [c["counter"], c["gray"], "button", "button-font"].join(' ');
 
     return (
         <div className={styles} onClick={(e) => handleClickZoom(e)} >

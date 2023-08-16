@@ -6,7 +6,7 @@ const TextField = ({ label, placeholder }) => {
 
     const handleBlur = (e) => {
         e.preventDefault();
-        console.log(e.target.value)
+
     }
 
     const attrMap = { "Email Adress": "email", "Phone Number": "tel" }

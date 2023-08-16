@@ -23,7 +23,6 @@ class DB {
     getCategoryPage(category: string): Category {
         const cat: Record[] = this.db.filter(item => item.category === category);
         return cat.map((item, index) => {
-            console.log(item.slug, index)
             const product = this.getProductPage(item.slug) as Product;
             return {...product, isLeft: index % 2 == 0};
         });
