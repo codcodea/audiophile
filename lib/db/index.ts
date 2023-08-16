@@ -22,9 +22,13 @@ class DB {
 
     getCategoryPage(category: string): Category {
         const cat: Record[] = this.db.filter(item => item.category === category);
+
+        // Check if category has odd number of products for correct alignment (image starts left)
+        const catOddLength = cat.length % 2 !== 0;
+
         return cat.map((item, index) => {
             const product = this.getProductPage(item.slug) as Product;
-            return {...product, isLeft: index % 2 == 0};
+            return {...product, isLeft: catOddLength ? index % 2 == 0 : index % 2 == 1};
         });
     }
 
